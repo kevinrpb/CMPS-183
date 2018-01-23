@@ -13,7 +13,7 @@ Use modern Node/React/Express frameworks to create a website that allows student
 
 
 ## Team Members
->Ron Marks - PO
+Ron Marks - PO
 Kevin Romero Peces-Barba - Developer
 Katerina Chinnappan - Scrum Master (Sprint 1)
 Marielle Norris - Developer
