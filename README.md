@@ -5,6 +5,7 @@ Use modern Node/React/Express frameworks to create a website that allows student
 
 ## Documents
 [Sprint 1](https://docs.google.com/document/d/12I-Q21wPMOoyTfUW27Hp_W_xazsKs4Od_s6yv6pAQgY/edit?usp=sharing)
+
 [Release Plan 1](https://docs.google.com/document/d/1UQ19d5sdkth_8BzuwrX1pVepqWDvTsUHg0RQOk4Y-LI/edit?usp=sharing)
 
 
@@ -14,6 +15,9 @@ Use modern Node/React/Express frameworks to create a website that allows student
 
 ## Team Members
 Ron Marks - PO
+
 Kevin Romero Peces-Barba - Developer
+
 Katerina Chinnappan - Scrum Master (Sprint 1)
+
 Marielle Norris - Developer
