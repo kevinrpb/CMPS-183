@@ -2,11 +2,18 @@
   "name": "textbook_exchange",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "dev": "NODE_PATH=./lib pm2 start app.js --watch --interpreter ./node_modules/.bin/babel-node",
     "build": "webpack -wd",
     "prod": "webpack -p"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "es2015"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,7 +29,8 @@
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.19.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
