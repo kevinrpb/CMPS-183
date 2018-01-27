@@ -1,0 +1,40 @@
+nav {
+	z-index: 600;
+}#landing-carousel {
+  margin-top: -58px;
+  max-height: 80vh;
+  z-index: 500; }
+  #landing-carousel .carousel-inner {
+    max-height: 80vh; }
+    #landing-carousel .carousel-inner .carousel-item {
+      max-height: 80vh; }
+      #landing-carousel .carousel-inner .carousel-item img {
+        max-height: 80vh;
+        object-fit: cover; }
+
+#landing-search {
+  position: absolute;
+  width: 800px;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: rgba(251, 251, 251, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 5px;
+  padding: 50px; }
+  #landing-search h2 {
+    text-align: center; }
+  #landing-search form {
+    margin-top: 2em; }
+
+#landing-section-1 {
+  background-color: #BEC2C4; }
+
+#landing-section-2 {
+  background-color: #293337;
+  color: white; }
+
+.card {
+  margin-top: 2em;
+  margin-bottom: 2em; }

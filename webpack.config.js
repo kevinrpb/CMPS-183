@@ -2,7 +2,6 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const CompressionPlugin = require("compression-webpack-plugin");
 
-
 const config = {
   entry: ['babel-polyfill', './views/Index.jsx'],
   output: {
@@ -12,29 +11,24 @@ const config = {
   },
   module: {
     rules: [
-      { test: /\.(jsx|js)$/, exclude: /node_modules/ , use: 'babel-loader' },
+      { 
+      	test: /\.(jsx|js)$/, 
+      	exclude: /node_modules/, 
+      	use: 'babel-loader' 
+      },
       { 
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
-      },
-      {
-      	test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
+          fallback: 'style-loader',
           use: [{
-          	loader: "css-loader"
-          }, {
-          	loader: "sass-loader"
+          	loader: 'css-loader'
           }]
         })
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin('styles.css')
     // new CompressionPlugin({
     //     asset: "[path].gz[query]",
     //     test: /\.(js|jsx)$/,
