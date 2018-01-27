@@ -10,16 +10,16 @@ const LandingCarousel = (props) => {
 		<div id="landing-carousel" className="carousel slide" data-ride="carousel">
 			<div className="carousel-inner">
 				<div className="carousel-item active">
-					<img src="./img/books0.jpg" alt="" className="d-block w-100"/>
+					<img src="./img/books0.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books1.jpg" alt="" className="d-block w-100"/>
+					<img src="./img/books1.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books2.jpg" alt="" className="d-block w-100"/>
+					<img src="./img/books2.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books3.jpg" alt="" className="d-block w-100"/>
+					<img src="./img/books3.jpg" alt="" className="d-block"/>
 				</div>
 			</div>
 		  <a className="carousel-control-prev" href="#landing-carousel" role="button" data-slide="prev">
@@ -87,16 +87,16 @@ class Landing extends React.Component {
 							<h2>Look for Textbooks</h2>
 							<form action="/listings">
 								<div className="row">
-									<div className="form-group col-12 col-md-3 offset-md-1">
+									<div className="form-group col-12 col-md-4 col-lg-3 offset-lg-1">
 								    <select className="form-control" id="landing-search-select" name="list-type">
 								      <option value="offers">I want to buy...</option>
 								      <option value="requests">I want to sell...</option>
 								    </select>
 									</div>
-									<div className="form-group col-12 col-md-7">
+									<div className="form-group col-12 col-md-8 col-lg-7">
 										<input type="text" className="form-control" id="landing-search-text" name="query" placeholder="Search textbook..." />
 									</div>
-									<div className="form-group col-12 col-md-6 offset-md-3">
+									<div className="form-group col-12 col-md-4 offset-md-4">
 										<button type="submit" className="btn btn-block btn-danger"><span className="fa fa-search"></span> Search</button>
 									</div>
 								</div>

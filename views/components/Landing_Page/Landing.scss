@@ -1,17 +1,39 @@
+@import '../../lib/util';
+
 #landing-carousel {
 	margin-top: -58px;
-	max-height: 80vh;
 	z-index: 500;
+	
+	height: 100vh;
 
 	.carousel-inner {
-		max-height: 80vh;
+		height: 100%;
 
 		.carousel-item {
-			max-height: 80vh;
-
+			height: 100%;
+			
 			img {
-				max-height: 80vh;
+				height: 100vh;
 				object-fit: cover;
+			}
+		}
+	}
+
+	// Responsive, lg and up sizes
+	@include media('>medium') {
+		height: 80vh;
+
+		.carousel-inner {
+			height: 100%;
+
+			.carousel-item {
+				height: 100%;
+				
+				img {
+					height: 80vh;
+					width: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 	}
@@ -20,18 +42,15 @@
 #landing-search {
 	position: absolute;
 
-	width: 800px;
 	left: 50%;
 	top: 50%;
 
 	transform: translateY(-50%) translateX(-50%);
 
 	background-color: rgba(251, 251, 251, .3);
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-	border-radius: 5px;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 
-	padding: 50px;
 
 	h2 {
 		text-align: center;
@@ -39,6 +58,22 @@
 
 	form {
 		margin-top: 2em;
+	}
+	
+	@include media('<medium') {
+		height: 100%;
+		width: 100%;
+		padding-top: 25%;
+	}
+
+	@include media('>medium') {
+		width: 600px;
+		padding: 50px;
+		border-radius: 5px;
+	}
+
+	@include media('>large') {
+		width: 800px;
 	}
 }
 
