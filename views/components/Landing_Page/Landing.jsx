@@ -128,7 +128,9 @@ class Landing extends React.Component {
 							</div>
 						</div>
 					</div>
-
+					<div class="copyright">
+			  <center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
+		     </div>
 					<div id="landing-section-2" className="landing-section">
 						<div className="container">
 							<div className="row">
@@ -138,6 +140,7 @@ class Landing extends React.Component {
 					</div>
 				</div>
 			</div>
+
 		);
 	}
 }
