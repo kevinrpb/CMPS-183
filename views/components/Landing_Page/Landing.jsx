@@ -13,6 +13,9 @@ const LandingCarousel = (props) => {
 					<img src="./img/books0.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
+					<img src="./img/books.jpg" alt="" className="d-block"/>
+				</div>
+				<div className="carousel-item">
 					<img src="./img/books1.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
@@ -20,6 +23,12 @@ const LandingCarousel = (props) => {
 				</div>
 				<div className="carousel-item">
 					<img src="./img/books3.jpg" alt="" className="d-block"/>
+				</div>
+				<div className="carousel-item">
+					<img src="./img/books4.jpg" alt="" className="d-block"/>
+				</div>
+				<div className="carousel-item">
+					<img src="./img/books5.jpg" alt="" className="d-block"/>
 				</div>
 			</div>
 		  <a className="carousel-control-prev" href="#landing-carousel" role="button" data-slide="prev">
@@ -84,7 +93,7 @@ class Landing extends React.Component {
 				<div className="container-fluid p-0">
 					<LandingCarousel>
 						<div id="landing-search" className="container-fluid">
-							<h2>Look for Textbooks</h2>
+							<strong><h2>Browse Our Library...</h2></strong>
 							<form action="/listings">
 								<div className="row">
 									<div className="form-group col-12 col-md-4 col-lg-3 offset-lg-1">

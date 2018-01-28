@@ -1,5 +1,34 @@
 nav {
 	z-index: 600;
+}
+.icon-spin {
+  -webkit-animation: icon-spin 7s infinite linear;
+          animation: icon-spin 7s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+.logo{
+	margin-bottom:100px;
 }#landing-carousel {
   margin-top: -58px;
   z-index: 500;
@@ -27,6 +56,7 @@ nav {
   position: absolute;
   left: 50%;
   top: 50%;
+  font-style: bold;
   transform: translateY(-50%) translateX(-50%);
   background-color: rgba(251, 251, 251, 0.3);
   backdrop-filter: blur(5px);
@@ -39,7 +69,8 @@ nav {
     #landing-search {
       height: 100%;
       width: 100%;
-      padding-top: 25%; } }
+      padding-top: 25%;
+       } }
   @media (min-width: 769px) {
     #landing-search {
       width: 600px;

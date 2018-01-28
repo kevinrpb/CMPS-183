@@ -41,7 +41,7 @@ class Navbar extends React.Component {
 		}
 		return (
 			<nav className={"navbar navbar-expand navbar-dark" + (this.props.bg ? "bg-dark" : "")}>
-				<a className="navbar-brand" href="/"><img src="./logo-no-bg.png" height="30" alt=""/></a>
+				<a className="icon-spin"><a className="navbar-brand" href="/"><a className="logo"><img src="./logo-no-bg.png" height="35" width="100" alt=""/></a></a></a>
 
 				<ul className="navbar-nav ml-auto">
 					<UserLink userLogged={user ? true : false} user={user}/>
