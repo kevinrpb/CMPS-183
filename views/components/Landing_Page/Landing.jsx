@@ -106,7 +106,7 @@ class Landing extends React.Component {
 										<input type="text" className="form-control" id="landing-search-text" name="query" placeholder="Search textbook..." />
 									</div>
 									<div className="form-group col-12 col-md-4 offset-md-4">
-										<button type="submit" className="btn btn-block btn-danger"><span className="fa fa-search"></span> Search</button>
+										<a className="glass"><button type="submit" className="btn btn-block btn-danger"><span className="fa fa-search"></span> Search</button></a>
 									</div>
 								</div>
 							</form>
