@@ -31,6 +31,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
+    "firebase": "^4.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
