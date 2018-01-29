@@ -1,5 +1,11 @@
 node_modules/
+
 public/bundle.js
 public/bundle.js.gz
+public/styles.css
+
 .DS_Store
+
 npm-debug.log
+
+views/*.css

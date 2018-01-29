@@ -3,5 +3,8 @@
  */
 
 exports.index = function(req, res){
-  res.render('Index');
+  res.render('Index', {
+  	title: 'TBH - Home',
+  	page: 'home'
+  });
 };
