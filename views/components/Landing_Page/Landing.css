@@ -1,0 +1,71 @@
+#landing-carousel {
+  margin-top: -58px;
+  z-index: 500;
+  height: 100vh; }
+  #landing-carousel .carousel-inner {
+    height: 100%; }
+    #landing-carousel .carousel-inner .carousel-item {
+      height: 100%; }
+      #landing-carousel .carousel-inner .carousel-item img {
+        height: 100vh;
+        object-fit: cover; }
+  @media (min-width: 769px) {
+    #landing-carousel {
+      height: 80vh; }
+      #landing-carousel .carousel-inner {
+        height: 100%; }
+        #landing-carousel .carousel-inner .carousel-item {
+          height: 100%; }
+          #landing-carousel .carousel-inner .carousel-item img {
+            height: 80vh;
+            width: 100%;
+            object-fit: cover; } }
+
+#landing-search {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: rgba(251, 251, 251, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); }
+  #landing-search h2 {
+    text-align: center; }
+  #landing-search form {
+    margin-top: 2em; }
+  @media (max-width: 767px) {
+    #landing-search {
+      height: 100%;
+      width: 100%;
+      padding-top: 25%; } }
+  @media (min-width: 769px) {
+    #landing-search {
+      width: 600px;
+      padding: 50px;
+      border-radius: 5px; } }
+  @media (min-width: 993px) {
+    #landing-search {
+      width: 800px; } }
+
+#landing-section-1 {
+  background-color: #BEC2C4; }
+
+#landing-section-2 {
+  background-color: #293337;
+  color: white; }
+
+.card {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+.copyright {
+  text-align: center;
+  padding: 3em 0em 0em 0em; }
+  .copyright p {
+    font-size: 1em;
+    color: #000000; }
+    .copyright p a {
+      color: #d3bda5; }
+      .copyright p a:hover {
+        color: #fff;
+        text-decoration: none; }

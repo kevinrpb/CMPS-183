@@ -25,6 +25,7 @@ app.engine('jsx', createEngine());
 
 /* routes */
 app.get('/', routes.index);   // landing page
+app.get('/profile', routes.profile);       //  profile page
 
 app.listen(
     port,
