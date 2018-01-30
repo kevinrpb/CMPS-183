@@ -4,8 +4,8 @@ import PageContent from './PageContent.jsx';
 import './global.css';
 
 class Index extends React.Component {
-	render() {
 
+	render() {
 		return (
 			<Layout title={this.props.title}>
 				<PageContent page={this.props.page}/>

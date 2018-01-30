@@ -8,7 +8,6 @@ class PageContent extends React.Component {
 
 	render() {
 		switch (this.props.page) {
-
 			case 'profile':
 				return(<ProfilePage />);
 				break;
@@ -38,13 +37,6 @@ if (!firebase.apps.length) {
 		projectId: "textbookheroes-6b61a",
 		storageBucket: "textbookheroes-6b61a.appspot.com",
 	});
-}
-
-if (typeof window !== 'undefined') {
-	ReactDOM.render(     
-		<PageContent />,
-		document.getElementById('root')        
-		);
 }
 
 export default PageContent;

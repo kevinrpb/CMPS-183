@@ -2,9 +2,9 @@
  * GET profile page.
  */
 
-exports.index = function(req, res){
-  res.render('Index', {
-  	title: 'TBH - Profile',
+module.exports = function(req, res) {
+	res.render('Index', {
+  	title: 'TBH - Home',
   	page: 'profile'
   });
-};
+}

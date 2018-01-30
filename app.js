@@ -1,5 +1,4 @@
 var express = require('express');
-var routes = require('./routes');
 var { createEngine } = require('express-react-views');
 
 const app = express();
@@ -24,8 +23,8 @@ app.use(express.static('public'));
 app.engine('jsx', createEngine());
 
 /* routes */
-app.get('/', routes.index);   // landing page
-app.get('/profile', routes.profile);       //  profile page
+app.get('/', require('./routes/index'));   				// landing page
+app.get('/profile', require('./routes/profile'));   //  profile page
 
 app.listen(
     port,

@@ -15,16 +15,16 @@ If you haven't already: npm install
 You'll have to edit 3 files.
 1. Create new route file in _./routes_ (similar to index.js). Note you have to call render 'Index', and pass a parameter of the page you want to render:
 ```
-exports.pageName = function(req, res){
+module.exports = function(req, res) {
 	res.render('Index', {
-		title: 'title',
-		page: 'pageName'
-	});
-};
+  	title: 'TBH - Home',
+  	page: 'pageName'
+  });
+}
 ```
 2. Add route to app in _./app.js_:
 ```
-app.get('/', routes.pageName);
+app.get('/', require('./routes/routeFile'));
 ```
 3. Add rendering view in _./views/PageContent.jsx_. There's a switch statement that will select what component to render based on the parameter passed in the first point.
 ```
