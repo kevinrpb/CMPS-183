@@ -8,4 +8,4 @@ public/styles.css
 
 npm-debug.log
 
-views/*.css
+views/**/*.css
