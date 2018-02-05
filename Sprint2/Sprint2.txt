@@ -1,0 +1,52 @@
+Sprint 2 Plan
+
+Product name: Textbook Exchange
+Team name: Textbook Heros
+Sprint Completion: 2/12/2018
+Revision number 1.0
+Revision date 2/05/2018
+
+Goal
+Our goal is to develop the routings for all the pages and set up the user profile
+
+Task listing, organized by user story
+
+* User Story 1: As a developer I want to route the profile page
+* Task 1: Look up routing in React and route all pagest (1 hour)
+Total Hours: ~1 hour
+        
+* User Story 2: As a developer I want to  be able to save and edit my information
+* Task 1: Look up how to save information in the database (30 min)
+* Task 2: Be able to edit information and update the database(< 1 week)
+Total Time: < 1 week
+
+* User Story 3: As a developer I want to  display the textbooks
+* Task 1: Work on the design of the main page (~30 min)
+* Task: Work on displaying some data (< 1 week)
+Total Hours: < 1 week
+
+Team Roles
+* Ron Marks - Product Owner
+* Katerina Chinnappan - Scrum Master
+* Kevin Romero Peces-Barba  - Developer
+
+Initial Task Assignment
+*  Ron Marks:
+  * User Story 1: As a developer I want to route the profile page
+  * User Story 2: As a developer I want to save the information in the database
+  * User Story 3: As a developer I want to work on the main page and be able to update the info and update the database
+
+* Katerina Chinnappan:
+ * User Story 1: As a developer I want to route the profile page
+ * User Story 2: As a developer I want to save the information in the database
+  * User Story 3: As a developer I want to work on the main page and be able to update the info and update the database
+
+* Kevin Romero Peces-Barba
+  * User Story 1: As a developer I want to route the profile page
+  * User Story 2: As a developer I want to save the information in the database
+  * User Story 3: As a developer I want to work on the main page and be able to update the info and update the database
+
+Scrum Times
+* Monday: 15 min within 13:30  - 15:00
+* Wednesday: 13:30  - 13:45 
+* Friday: 13:30  - 13:45
