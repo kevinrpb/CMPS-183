@@ -10,7 +10,7 @@ const UserLink = (props) => {
 				</a>
 				<div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-user-name">
 					<a className="dropdown-item" href="/profile"><span className="fa fa-user-circle"></span> Profile</a>
-					<a className="dropdown-item" href="/profile/listings"><span className="fa fa-list"></span> My Listings</a>
+					<a className="dropdown-item" href="/listing"><span className="fa fa-list"></span> My Listings</a>
 					<div className="dropdown-divider"></div>
 					<a className="dropdown-item" href="/logout"><span className="fa fa-sign-out-alt"></span> Log Out</a>
 				</div>
@@ -41,7 +41,7 @@ class Navbar extends React.Component {
 		}
 		console.log(this.props.bg)
 		return (
-			<nav className={"navbar navbar-expand navbar-dark" + (this.props.bg ? " bg-dark" : "")}>
+			<nav className={"navbar navbar-expand navbar-dark" + (this.props.bg ? " bg-danger " : "")}>
 				<div className="icon-spin">
 					<a className="navbar-brand" href="/">
 						<img src="./logo-no-bg.png" height="35" width="100" alt=""/>

@@ -4,7 +4,7 @@
 
 module.exports = function(req, res) {
 	res.render('Index', {
-  	title: 'TBH - Profile',
-  	page: 'profile'
+  	title: 'TBH - Listing',
+  	page: 'listing'
   });
 }

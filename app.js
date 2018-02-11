@@ -25,6 +25,7 @@ app.engine('jsx', createEngine());
 /* routes */
 app.get('/', require('./routes/index'));   				// landing page
 app.get('/profile', require('./routes/profile'));   //  profile page
+app.get('/listing', require('./routes/listing'));  //listing page
 
 app.listen(
     port,
