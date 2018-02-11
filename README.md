@@ -46,7 +46,10 @@ switch (this.props.page) {
 		break;
 }
 ```
-
+4. Import the page to PageContent.jsx.
+```
+import namePage from './components/name_Page/name.jsx';
+```
 
 ## Documents
 [Sprint 1](https://docs.google.com/document/d/12I-Q21wPMOoyTfUW27Hp_W_xazsKs4Od_s6yv6pAQgY/edit?usp=sharing)
