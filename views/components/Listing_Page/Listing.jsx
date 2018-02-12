@@ -15,7 +15,7 @@ class Listing extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar bg={true} />
+				<Navbar navClass={'bg-danger'} />
 				<p>This is listing</p>
 			</div>
 		);

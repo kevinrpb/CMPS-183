@@ -39,9 +39,9 @@ class Navbar extends React.Component {
 		const user = {
 			username: "SampleUser123"
 		}
-		console.log(this.props.bg)
+		// console.log(this.props.bg)
 		return (
-			<nav className={"navbar navbar-expand navbar-dark" + (this.props.bg ? " bg-danger " : "")}>
+			<nav className={"navbar navbar-expand navbar-dark " + this.props.navClass}>
 				<div className="icon-spin">
 					<a className="navbar-brand" href="/">
 						<img src="./logo-no-bg.png" height="35" width="100" alt=""/>

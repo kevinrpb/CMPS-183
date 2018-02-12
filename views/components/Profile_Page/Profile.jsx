@@ -15,7 +15,7 @@ class Profile extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar bg={true} />
+				<Navbar navClass={'bg-danger custom'} />
 				<p>This is profile</p>
 			</div>
 		);
