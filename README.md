@@ -68,4 +68,4 @@ import namePage from './components/name_Page/name.jsx';
 
 >Katerina Chinnappan - Scrum Master (Sprint 1)
 
->Marielle Norris - Developer
+>Bryan Uribe - Developer
