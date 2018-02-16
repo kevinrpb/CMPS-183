@@ -1,6 +1,6 @@
 import React from 'react';
-
 import Navbar from '../Navbar/Nav.jsx';
+import firebase from '../../../Firebase.js';
 
 import './Landing.css';
 
@@ -81,9 +81,11 @@ const LandingCard = (props) => {
 class Landing extends React.Component {
 	constructor() {
 		super();
+		this.samplePushData = this.samplePushData.bind(this);
 	}
 
-	componentDidMount() {
+	componentWillMount() {
+		this.samplePushData();
 	}
 
 	render() {
@@ -142,6 +144,17 @@ class Landing extends React.Component {
 			</div>
 
 		);
+	}
+
+	samplePushData() {
+	    let data = {
+	        name: 'Los Angeles',
+	        state: 'CA',
+	        country: 'USA'
+	    };
+
+	    // Add a new document in collection "cities" with ID 'LA'
+	    firebase.database().ref().push("hi");
 	}
 }
 
