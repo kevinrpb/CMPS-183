@@ -3,16 +3,12 @@ import Layout from './Layout.jsx';
 import PageContent from './PageContent.jsx';
 import './global.css';
 
-class Index extends React.Component {
-
-	render() {
-		return (
-			<Layout title={this.props.title}>
-				<PageContent page={this.props.page}/>
-			</Layout>
-		);
-
-	}
+const Index = (props) => {
+	return (
+		<Layout title={props.title}>
+			<PageContent page={props.page} data={props.data} />
+		</Layout>
+	);
 }
 
 export default Index;

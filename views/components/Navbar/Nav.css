@@ -1,10 +1,6 @@
 nav {
   z-index: 600; }
 
-.icon-spin {
-  -webkit-animation: icon-spin 7s infinite linear;
-  animation: icon-spin 7s infinite linear; }
-
 @-webkit-keyframes icon-spin {
   0% {
     -webkit-transform: rotate(0deg);

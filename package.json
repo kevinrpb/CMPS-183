@@ -6,7 +6,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar views/ -o views/",
     "watch-css": "npm run build-css && node-sass-chokidar views/ -o views/ --watch --recursive",
-    "dev": "NODE_PATH=./lib pm2 start app.js --watch --interpreter ./node_modules/.bin/babel-node",
+    "dev": "NODE_PATH=./lib pm2 start app.js --name \"tbh\" --watch --interpreter ./node_modules/.bin/babel-node",
     "build": "webpack -wd",
     "start": "npm-run-all -p watch-css build",
     "prod": "webpack -p"

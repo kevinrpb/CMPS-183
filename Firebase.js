@@ -1,6 +1,6 @@
 const firebase = require('firebase');
 
-let config = {
+const config = {
     apiKey: "AIzaSyAeT14vGBBOcIhcu0F33-yVXGPw746XK4M",
     authDomain: "textbookheroes-2df75.firebaseapp.com",
     databaseURL: "https://textbookheroes-2df75.firebaseio.com",
@@ -8,10 +8,20 @@ let config = {
     storageBucket: "textbookheroes-2df75.appspot.com",
 };
 
-var fb;
+let fb;
 
 if (!firebase.apps.length) {
-    fb = firebase.initializeApp(config);
+  fb = firebase.initializeApp(config);
+} else {
+	fb = firebase.apps[0];
 }
 
-module.exports = fb;
+module.exports = {
+	app: fb,
+	db: fb.database(),
+	queryListings: function() {
+		return new Promise(function(resolve, reject) {
+			resolve([]);
+		});
+	}
+};
