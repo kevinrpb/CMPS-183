@@ -5,8 +5,13 @@ let db = require('../Firebase');
  */
 
 module.exports = function(req, res) {
-	db.queryListings()
+	// db.pushDummy();
+	let type = req.query.type || 'offers';
+	let query = req.query.query;
+
+	db.queryListings(type, query)
 		.then(function(data) {
+			console.log(data);
 			res.render('Index', {
 		  	title: 'TBH - Listing',
 		  	page: 'listing',
@@ -14,6 +19,7 @@ module.exports = function(req, res) {
 		  });
 		})
 		.catch(function(err) {
+			console.error(err);
 			res.send(err);
 		});
 }

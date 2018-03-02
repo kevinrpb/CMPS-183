@@ -1,4 +1,5 @@
 var express = require('express');
+var morgan = require('morgan');
 var { createEngine } = require('express-react-views');
 
 const app = express();
@@ -20,6 +21,7 @@ require.extensions['.css'] = function() {
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.use(express.static('public'));
+app.use(morgan('dev'));
 app.engine('jsx', createEngine());
 
 /* routes */

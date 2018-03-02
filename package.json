@@ -6,9 +6,12 @@
   "scripts": {
     "build-css": "node-sass-chokidar views/ -o views/",
     "watch-css": "npm run build-css && node-sass-chokidar views/ -o views/ --watch --recursive",
-    "dev": "NODE_PATH=./lib pm2 start app.js --name \"tbh\" --watch --interpreter ./node_modules/.bin/babel-node",
+  	"babel-node": "babel-node --presets=react",
+    "dev": "NODE_PATH=./lib pm2 start app.js --watch --name \"tbh\" --interpreter ./node_modules/.bin/babel-node",
+    "dev2": "nodemon --exec npm run babel-node -- ./app.js",
     "build": "webpack -wd",
     "start": "npm-run-all -p watch-css build",
+    "start:dev": "npm-run-all -p watch-css build dev2",
     "prod": "webpack -p"
   },
   "babel": {
@@ -32,6 +35,7 @@
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
     "firebase": "^4.9.0",
+    "morgan": "^1.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

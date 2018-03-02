@@ -4,12 +4,17 @@ Use modern Node/React/Express frameworks to create a website that allows student
 
 ## Instructions to run development
 
-If you haven't already: npm install
+If you haven't already: `npm instal`
 1. `npm run dev`
 2. ~~`npm run build`~~ (replaced to support SCSS)
 2. `npm start`
 3. Go to [localhost:8000](http://localhost:8000)
 4. pm2 logs to see live logging for debugging
+
+Alternative without pm2:
+1. `npm run start:dev`
+2. Go to [localhost:8000](http://localhost:8000)
+
 
 ## Add new routes
 You'll have to edit 3 files.

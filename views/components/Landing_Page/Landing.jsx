@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../Navbar/Nav.jsx';
-import firebase from '../../../Firebase.js';
 
 import './Landing.css';
 
@@ -94,10 +93,10 @@ class Landing extends React.Component {
 					<LandingCarousel>
 						<div id="landing-search" className="container-fluid">
 							<strong><h2>Browse Our Library...</h2></strong>
-							<form action="/listings">
+							<form action="/listing">
 								<div className="row">
 									<div className="form-group col-12 col-md-4 col-lg-3 offset-lg-1">
-								    <select className="form-control" id="landing-search-select" name="list-type">
+								    <select className="form-control" id="landing-search-select" name="type">
 								      <option value="offers">I want to buy...</option>
 								      <option value="requests">I want to sell...</option>
 								    </select>
