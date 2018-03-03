@@ -56,6 +56,22 @@ switch (this.props.page) {
 import namePage from './components/name_Page/name.jsx';
 ```
 
+## Work with DB example
+I think it's good to add a small tutorial/explanation so we can follow some common ideas while using the DB.
+
+First, we have a Firebase.js file in our root directory. This is the place where we'll work to access the DB and we'll use it from our _routes_ in the server.
+
+For example, for the listings:
+- In _routes/listing.js_ we require it with `let db = require('../Firebase');`.
+- Then, in the route handler we call the function __queryListings__. 
+	- This function takes a _type_ and a _query_. This is, it receives whether we're looking for offers or requests (type) and what we're looking for (text query). 
+	- The function return a JS promise (review documentation on what's a promise, it's very useful and it's a proper way of doing this).
+		- With this promise we can handle the return of data from _Firebase.js_ and possible errors.
+- Once we have the data returned, we render the page as usual, but passing in a __data__ object that contains whatever extra things we need in that page. In the case of listings we need the items returned by the DB controller, the query and the type of search.
+- In the template (.jsx) file for our page we receive this extra info in _props.data_ object. Then we proceed for each page (in the listings we use it to populate the grid and to set the values of the search form).
+- There's a proto funciton in _Firebase.js_ to show how to structure DB accesses. The __queryListings__ function is there also commented showing what's going on.
+
+
 ## Documents
 [Sprint 1](https://docs.google.com/document/d/12I-Q21wPMOoyTfUW27Hp_W_xazsKs4Od_s6yv6pAQgY/edit?usp=sharing)
 
