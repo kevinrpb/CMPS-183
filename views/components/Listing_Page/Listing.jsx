@@ -53,7 +53,7 @@ class Listing extends React.Component {
 						    </select>
 							</div>
 							<div className="form-group col-12 col-md-8 col-lg-6">
-								<input type="text" className="form-control" id="landing-search-text" name="query" placeholder="Search textbook..." value={this.state.query} />
+								<input type="text" className="form-control" id="landing-search-text" name="query" placeholder="Search textbook..." defaultValue={this.state.query || ""} />
 							</div>
 							<div className="form-group col-12 col-lg-3">
 								<a className="glass"><button type="submit" className="btn btn-block btn-danger"><span className="fa fa-search"></span> Search</button></a>

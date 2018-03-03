@@ -89,7 +89,7 @@ class Landing extends React.Component {
 		return (
 			<div>
     		<Navbar bg={false} />
-				<div className="container-fluid p-0">
+				<div id="landing-wrapper" className="container-fluid">
 					<LandingCarousel>
 						<div id="landing-search" className="container-fluid">
 							<strong><h2>Browse Our Library...</h2></strong>
@@ -127,9 +127,6 @@ class Landing extends React.Component {
 							</div>
 						</div>
 					</div>
-					<div className="copyright">
-			  <center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
-		     </div>
 					<div id="landing-section-2" className="landing-section">
 						<div className="container">
 							<div className="row">
@@ -137,6 +134,10 @@ class Landing extends React.Component {
 							</div>
 						</div>
 					</div>
+
+					<div className="copyright">
+			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
+		     	</div>
 				</div>
 			</div>
 

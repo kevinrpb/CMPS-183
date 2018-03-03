@@ -1,5 +1,8 @@
+#landing-wrapper {
+  padding: 0;
+  margin-top: -61px; }
+
 #landing-carousel {
-  margin-top: -58px;
   z-index: 500;
   height: 100vh; }
   #landing-carousel .carousel-inner {
