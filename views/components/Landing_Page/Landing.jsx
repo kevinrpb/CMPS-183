@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../Navbar/Nav.jsx';
-import firebase from '../../../Firebase.js';
 
 import './Landing.css';
 
@@ -90,14 +89,14 @@ class Landing extends React.Component {
 		return (
 			<div>
     		<Navbar bg={false} />
-				<div className="container-fluid p-0">
+				<div id="landing-wrapper" className="container-fluid">
 					<LandingCarousel>
 						<div id="landing-search" className="container-fluid">
 							<strong><h2>Browse Our Library...</h2></strong>
-							<form action="/listings">
+							<form action="/listing">
 								<div className="row">
 									<div className="form-group col-12 col-md-4 col-lg-3 offset-lg-1">
-								    <select className="form-control" id="landing-search-select" name="list-type">
+								    <select className="form-control" id="landing-search-select" name="type">
 								      <option value="offers">I want to buy...</option>
 								      <option value="requests">I want to sell...</option>
 								    </select>
@@ -128,9 +127,6 @@ class Landing extends React.Component {
 							</div>
 						</div>
 					</div>
-					<div className="copyright">
-			  <center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
-		     </div>
 					<div id="landing-section-2" className="landing-section">
 						<div className="container">
 							<div className="row">
@@ -138,6 +134,10 @@ class Landing extends React.Component {
 							</div>
 						</div>
 					</div>
+
+					<div className="copyright">
+			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
+		     	</div>
 				</div>
 			</div>
 

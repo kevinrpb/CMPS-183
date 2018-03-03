@@ -1,109 +1,115 @@
 {
-    "users": {
-        "kimberlyamchatton@gmail,com": {
-            "name": "kim mchatton",
-            "uid": "TAq1mL4tAocYrVGW0toeDbYRBTm2",
-            "listings": false,
-            "offers": {
-                "-Ks4lj1Bix3IClNMN1Bm": true
-            }
-        },
-        "kirsteeh87@gmail,com": {
-            "name": "kirstee harden",
-            "uid": "tkpe2cK4uQNjJK2Vk4j40nK8vgU2",
-            "listings": false,
-            "offers": {
-                "-Ks9fG2PMI2pn-JDkA3O": true
-            }
-        },
-        "kkierski@wisc,edu": {
-            "name": "katharine kierski",
-            "uid": "JJ94lIKQ6BRou7mu1r8dFmlArpk2",
-            "listings": {
-                "-KrmIK6RgJImTfX9t3-S": true
-            },
-            "offers": false
-        },
-        "klfauna@gmail,com": {
-            "name": "kim lasser",
-            "uid": "EJR79IeugAQ9nE4j0YhRbkQIpO52",
-            "listings": {
-                "-KrlsnWiaaDOwE7r3Jq6": true
-            },
-            "offers": false
-        },
-        "kmant003@gmail,com": {
-            "name": "kristine mantaring",
-            "uid": "gi10B2iEgLdZUNxLn84ghkMQxHZ2",
-            "listings": {
-                "-KrlsiiwuQ_xUN9lxs6I": true
-            },
-            "offers": {
-                "-KtHKrFLoEvaK54z6t_y": true
-            }
-        },
-        "kohppa@gmail,com": {
-            "name": "cody parker",
-            "uid": "hf7kKl4uxfMdz4TUByr8fnuYxsF2",
-            "listings": {
-                "-KrjvWXQKdD3lKLkDjAh": true
-            },
-            "offers": {
-                "-KtHKWvRyvdBdFbVX2Nj": true
-            }
-        }
-    },
-    "listings" : {
-        "-KrjvWXQKdD3lKLkDjAh" : {
-            "ISBN"  :  9780321558237,
-            "email" :  "kohppa@gmail.com",
-            "date"  :  1518766431,
-            "price" :  20.00
-        },
-        "-KrlsiiwuQ_xUN9lxs6I" : {
-            "ISBN"  :  9780321558237,
-            "email" :  "kmant003@gmail.com",
-            "date"  :  1518766431,
-            "price" :  15.00
-        },
-        "-KrlsnWiaaDOwE7r3Jq6" : {
-            "ISBN"  :  9780321199911,
-            "email" :  "klfauna@gmail.com",
-            "date"  :  1518766431,
-            "price" :  10.00
-        },
-        "-KrmIK6RgJImTfX9t3-S" : {
-            "ISBN"  :  9780321651785,
-            "email" :  "kkierski@wisc.edu",
-            "date"  :  1518766431,
-            "price" :  5.00
-        }
-    },
+	"users": {
+		"kimberlyamchatton": {
+			"name": "kim mchatton",
+			"email": "kimberlyamchatton@gmail.com",
+			"uid": "TAq1mL4tAocYrVGW0toeDbYRBTm2",
+			"requests": false,
+			"offers": {
+				"-Ks4lj1Bix3IClNMN1Bm": true
+			}
+		},
+		"kirsteeh87": {
+			"name": "kirstee harden",
+			"email": "kirsteeh87@gmail.com",
+			"uid": "tkpe2cK4uQNjJK2Vk4j40nK8vgU2",
+			"requests": false,
+			"offers": {
+				"-Ks9fG2PMI2pn-JDkA3O": true
+			}
+		},
+		"kkierski": {
+			"name": "katharine kierski",
+			"email": "kkierski@wisc.edu",
+			"uid": "JJ94lIKQ6BRou7mu1r8dFmlArpk2",
+			"requests": {
+				"-KrmIK6RgJImTfX9t3-S": true
+			},
+			"offers": false
+		},
+		"klfauna": {
+			"name": "kim lasser",
+			"email": "klfauna@gmail.com",
+			"uid": "EJR79IeugAQ9nE4j0YhRbkQIpO52",
+			"requests": {
+				"-KrlsnWiaaDOwE7r3Jq6": true
+			},
+			"offers": false
+		},
+		"kmant003": {
+			"name": "kristine mantaring",
+			"email": "kmant003@gmail.com",
+			"uid": "gi10B2iEgLdZUNxLn84ghkMQxHZ2",
+			"requests": {
+				"-KrlsiiwuQ_xUN9lxs6I": true
+			},
+			"offers": {
+				"-KtHKrFLoEvaK54z6t_y": true
+			}
+		},
+		"kohppa": {
+			"name": "cody parker",
+			"email": "kohppa@gmail.com",
+			"uid": "hf7kKl4uxfMdz4TUByr8fnuYxsF2",
+			"requests": {
+				"-KrjvWXQKdD3lKLkDjAh": true
+			},
+			"offers": {
+				"-KtHKWvRyvdBdFbVX2Nj": true
+			}
+		}
+	},
+	"requests" : {
+		"-KrjvWXQKdD3lKLkDjAh" : {
+			"ISBN"  :  9780321558237,
+			"email" :  "kohppa@gmail.com",
+			"date"  :  1518766431,
+			"price" :  20.00
+		},
+		"-KrlsiiwuQ_xUN9lxs6I" : {
+			"ISBN"  :  9780321558237,
+			"email" :  "kmant003@gmail.com",
+			"date"  :  1518766431,
+			"price" :  15.00
+		},
+		"-KrlsnWiaaDOwE7r3Jq6" : {
+			"ISBN"  :  9780321199911,
+			"email" :  "klfauna@gmail.com",
+			"date"  :  1518766431,
+			"price" :  10.00
+		},
+		"-KrmIK6RgJImTfX9t3-S" : {
+			"ISBN"  :  9780321651785,
+			"email" :  "kkierski@wisc.edu",
+			"date"  :  1518766431,
+			"price" :  5.00
+		}
+	},
 
-    "offers" : {
-        "-Ks4lj1Bix3IClNMN1Bm" : {
-            "ISBN"  :  9780321558237,
-            "email" :  "kimberlyamchatton@gmail.com",
-            "date"  :  1518766431,
-            "price" :  20.00
-        },
-        "-Ks9fG2PMI2pn-JDkA3O" : {
-            "ISBN"  :  9780321558237,
-            "email" :  "kirsteeh87@gmail.com",
-            "date"  :  1518766431,
-            "price" :  15.00
-        },
-        "-KtHKWvRyvdBdFbVX2Nj" : {
-            "ISBN"  :  9780321199911,
-            "email" :  "kohppa@gmail.com",
-            "date"  :  1518766431,
-            "price" :  10.00
-        },
-        "-KtHKrFLoEvaK54z6t_y" : {
-            "ISBN"  :  9780321651785,
-            "email" :  "kmant003@gmail.com",
-            "date"  :  1518766431,
-            "price" :  5.00
-        }
-    }
+	"offers" : {
+		"-Ks4lj1Bix3IClNMN1Bm" : {
+			"ISBN"  :  9780321558237,
+			"email" :  "kimberlyamchatton@gmail.com",
+			"date"  :  1518766431,
+			"price" :  20.00
+		},
+		"-Ks9fG2PMI2pn-JDkA3O" : {
+			"ISBN"  :  9780321558237,
+			"email" :  "kirsteeh87@gmail.com",
+			"date"  :  1518766431,
+			"price" :  15.00
+		},
+		"-KtHKWvRyvdBdFbVX2Nj" : {
+			"ISBN"  :  9780321199911,
+			"email" :  "kohppa@gmail.com",
+			"date"  :  1518766431,
+			"price" :  10.00
+		},
+		"-KtHKrFLoEvaK54z6t_y" : {
+			"ISBN"  :  9780321651785,
+			"email" :  "kmant003@gmail.com",
+			"date"  :  1518766431,
+			"price" :  5.00
+		}
+	}
 }
