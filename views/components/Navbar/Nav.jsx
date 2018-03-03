@@ -44,7 +44,7 @@ class Navbar extends React.Component {
 			<nav className={"navbar navbar-expand navbar-dark " + this.props.navClass}>
 				<div className="icon-spin">
 					<a className="navbar-brand" href="/">
-						<img src="./logo-no-bg.png" height="35" width="100" alt=""/>
+						<img src="/img/logo-no-bg.png" height="35" width="100" alt=""/>
 					</a>
 				</div>
 

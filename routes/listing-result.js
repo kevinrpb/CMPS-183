@@ -5,7 +5,6 @@ let db = require('../Firebase');
  */
 
 module.exports = function(req, res) {
-	// db.pushDummy();
 	let type = req.query.type || 'offers';
 	let query = req.query.query;
 
@@ -14,7 +13,7 @@ module.exports = function(req, res) {
 			// console.log(data);
 			res.render('Index', {
 		  	title: 'TBH - Listing',
-		  	page: 'listing',
+		  	page: 'listing-result',
 		  	data: {
 		  		items: data,
 		  		type: type,

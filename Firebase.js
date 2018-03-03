@@ -106,5 +106,13 @@ module.exports = {
 					reject(err);
 				});
 		});
+	},
+
+	getListing: function(type, id) {
+		let database = this.db;
+
+		return new Promise(function(resolve, reject) {
+			resolve(id);
+		});
 	}
 };

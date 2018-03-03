@@ -9,25 +9,25 @@ const LandingCarousel = (props) => {
 		<div id="landing-carousel" className="carousel slide" data-ride="carousel">
 			<div className="carousel-inner">
 				<div className="carousel-item active">
-					<img src="./img/books0.jpg" alt="" className="d-block"/>
+					<img src="/img/books0.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books.jpg" alt="" className="d-block"/>
+					<img src="/img/books.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books1.jpg" alt="" className="d-block"/>
+					<img src="/img/books1.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books2.jpg" alt="" className="d-block"/>
+					<img src="/img/books2.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books3.jpg" alt="" className="d-block"/>
+					<img src="/img/books3.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books4.jpg" alt="" className="d-block"/>
+					<img src="/img/books4.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="./img/books5.jpg" alt="" className="d-block"/>
+					<img src="/img/books5.jpg" alt="" className="d-block"/>
 				</div>
 			</div>
 		  <a className="carousel-control-prev" href="#landing-carousel" role="button" data-slide="prev">
