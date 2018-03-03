@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 
 import LandingPage from './components/Landing_Page/Landing.jsx';
 import ProfilePage from './components/Profile_Page/Profile.jsx';
-import ListingPage from './components/Listing_Page/Listing.jsx';
+import ListingResultPage from './components/ListingResult_Page/ListingResult.jsx';
+import ListingDetailPage from './components/ListingDetail_Page/ListingDetail.jsx';
 
 
 const PageContent = (props) => {
@@ -13,9 +14,14 @@ const PageContent = (props) => {
 			return(<ProfilePage data={props.data} />);
 			break;
 
-		case 'listing':
-			return(<ListingPage data={props.data} />)
+		case 'listing-result':
+			return(<ListingResultPage data={props.data} />)
 			break;
+
+		case 'listing-detail':
+			return(<ListingDetailPage data={props.data} />)
+			break;
+			
 		// case 'search':
 		// 	break;
 		

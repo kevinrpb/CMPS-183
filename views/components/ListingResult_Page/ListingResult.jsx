@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navbar from '../Navbar/Nav.jsx';
 
-import './Listing.css';
+import './ListingResult.css';
 
 const ListItem = (props) => {
 	return (
@@ -13,14 +13,14 @@ const ListItem = (props) => {
 					<h5 className="card-title">{props.item.title || "Default title"}</h5>
 					<h6 className="card-subtitle">{("$" + parseFloat(props.item.price).toFixed(2)) || 'No price'}</h6>
 					<p className="card-text">{props.item.ISBN || 'No ISBN'}</p>
-					<a href={"/listing/" + props.item.key} className="btn btn-primary">View Listing</a>
+					<a href={"/listing/" + props.type + "/" + props.item.key} className="btn btn-primary">View Listing</a>
 				</div>
 			</div>
 		</div>
 	);
 }
 
-class Listing extends React.Component {
+class ListingResult extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -37,7 +37,7 @@ class Listing extends React.Component {
 		let list = [];
 		
 		for (let item of this.state.items) {
-			list.push(<ListItem key={item.key} item={item} />)
+			list.push(<ListItem type={this.state.type} key={item.key} item={item} />)
 		}
 
 		return (
@@ -61,7 +61,7 @@ class Listing extends React.Component {
 						</div>
 					</form>
 				</div>
-				<div id="listing" className="container-fluid row">
+				<div id="listing-result" className="container-fluid row">
 					{list}
 				</div>
 			</div>
@@ -69,4 +69,4 @@ class Listing extends React.Component {
 	}
 }
 
-export default Listing;
+export default ListingResult;
