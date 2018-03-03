@@ -11,11 +11,15 @@ module.exports = function(req, res) {
 
 	db.queryListings(type, query)
 		.then(function(data) {
-			console.log(data);
+			// console.log(data);
 			res.render('Index', {
 		  	title: 'TBH - Listing',
 		  	page: 'listing',
-		  	data: data
+		  	data: {
+		  		items: data,
+		  		type: type,
+		  		query: query
+		  	}
 		  });
 		})
 		.catch(function(err) {

@@ -24,7 +24,9 @@ class Listing extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			items: props.data
+			items: props.data.items,
+			type: props.data.type,
+			query: props.data.query
 		}
 	}
 
@@ -35,12 +37,30 @@ class Listing extends React.Component {
 		let list = [];
 		
 		for (let item of this.state.items) {
-			list.push(<ListItem item={item} />)
+			list.push(<ListItem key={item.key} item={item} />)
 		}
 
 		return (
 			<div>
 				<Navbar navClass={'bg-danger'} />
+				<div id="listing-search" className="container-fluid">
+					<form action="/listing" className="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+						<div className="row">
+							<div className="form-group col-12 col-md-4 col-lg-3">
+						    <select className="form-control" id="landing-search-select" name="type" defaultValue={this.state.type || "offers"}>
+						      <option value="offers">I want to buy...</option>
+						      <option value="requests">I want to sell...</option>
+						    </select>
+							</div>
+							<div className="form-group col-12 col-md-8 col-lg-6">
+								<input type="text" className="form-control" id="landing-search-text" name="query" placeholder="Search textbook..." value={this.state.query} />
+							</div>
+							<div className="form-group col-12 col-lg-3">
+								<a className="glass"><button type="submit" className="btn btn-block btn-danger"><span className="fa fa-search"></span> Search</button></a>
+							</div>
+						</div>
+					</form>
+				</div>
 				<div id="listing" className="container-fluid row">
 					{list}
 				</div>
