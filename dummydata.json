@@ -61,24 +61,32 @@
 	},
 	"requests" : {
 		"-KrjvWXQKdD3lKLkDjAh" : {
+			"title" : "Desperados, The",
+			"author": "Roscoe Bayns",
 			"ISBN"  :  9780321558237,
 			"email" :  "kohppa@gmail.com",
 			"date"  :  1518766431,
 			"price" :  20.00
 		},
 		"-KrlsiiwuQ_xUN9lxs6I" : {
+			"title" : "21-87",
+			"author": "Tracey Hissie",
 			"ISBN"  :  9780321558237,
 			"email" :  "kmant003@gmail.com",
 			"date"  :  1518766431,
 			"price" :  15.00
 		},
 		"-KrlsnWiaaDOwE7r3Jq6" : {
+			"title" : "Han Gong-ju",
+			"author": "Wyatan Chamberlaine",
 			"ISBN"  :  9780321199911,
 			"email" :  "klfauna@gmail.com",
 			"date"  :  1518766431,
 			"price" :  10.00
 		},
 		"-KrmIK6RgJImTfX9t3-S" : {
+			"title" : "Fat Head",
+			"author": "Consuelo Walshaw",
 			"ISBN"  :  9780321651785,
 			"email" :  "kkierski@wisc.edu",
 			"date"  :  1518766431,
@@ -88,24 +96,32 @@
 
 	"offers" : {
 		"-Ks4lj1Bix3IClNMN1Bm" : {
+			"title" : "Charlie Chan at the Race Track",
+			"author": "Shanna Lipprose",
 			"ISBN"  :  9780321558237,
 			"email" :  "kimberlyamchatton@gmail.com",
 			"date"  :  1518766431,
 			"price" :  20.00
 		},
 		"-Ks9fG2PMI2pn-JDkA3O" : {
+			"title" : "Desert Fox, The",
+			"author": "Terence Killner",
 			"ISBN"  :  9780321558237,
 			"email" :  "kirsteeh87@gmail.com",
 			"date"  :  1518766431,
 			"price" :  15.00
 		},
 		"-KtHKWvRyvdBdFbVX2Nj" : {
+			"title" : "Salvatore Giuliano",
+			"author": "Abigael Geary",
 			"ISBN"  :  9780321199911,
 			"email" :  "kohppa@gmail.com",
 			"date"  :  1518766431,
 			"price" :  10.00
 		},
 		"-KtHKrFLoEvaK54z6t_y" : {
+			"title" : "Cool Hand Luke",
+			"author": "Joy Salter",
 			"ISBN"  :  9780321651785,
 			"email" :  "kmant003@gmail.com",
 			"date"  :  1518766431,
