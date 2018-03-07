@@ -107,6 +107,40 @@ module.exports = {
 				});
 		});
 	},
+	
+	queryProfile: function(type, query) {
+		let database = this.db;
+
+		return new Promise(function(resolve, reject) {
+			// Access the ref for type of listing (offers/requests)
+			database.ref('/' + type + '/').once('value')
+				.then(function(snapshot) {
+					// We reveive a snapshot (object) and want to transform into Array
+					let items1 = [];
+
+					// Iterate over snapshot items (children)
+					snapshot.forEach(function(childSnapshot) {
+						// Get the DB key for the item and the object.
+						let key = childSnapshot.key;
+						let data = childSnapshot.val();
+						// Add the key to the object to keep track of it
+						data.key = key;
+
+						// We filter the query and the object info to check if we should return it
+						if (!query || query == "" || isMatch(data, query))
+							// Push the item
+							items1.push(data)
+					});
+
+
+					// Return the array
+					resolve(items1);
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+	},
 
 	getListing: function(type, id) {
 		let database = this.db;

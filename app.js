@@ -28,6 +28,11 @@ app.get('/dummy', function(req, res) {
 	require('./Firebase').pushDummy();
 	res.redirect('/listing');
 });
+
+app.get('/dummy', function(req, res) {
+	require('./Firebase').pushDummy();
+	res.redirect('/profile');
+});
 /* routes */
 app.get('/', require('./routes/index'));   				// landing page
 app.get('/profile', require('./routes/profile'));   //  profile page
