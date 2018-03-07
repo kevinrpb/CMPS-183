@@ -19,7 +19,26 @@ if (!firebase.apps.length) {
 module.exports = {
 	app: fb,
 	db: fb.database(),
+	isUserSignedIn: () => {
+	    var user = fb.auth.currentUser;
+	    if (user) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	},
+	signIn: () => {
+	    var provider = new firebase.auth.GoogleAuthProvider();
 
+	    fb.auth().signInWithPopup(provider).then(function(result) {
+	        console.log("Signed in using Google.");
+	    }).catch(function(error) {
+	        console.log("Error occured with sign in.");
+	    });
+	},
+	signOut: () => {
+		fb.auth().signOut()
+	},
 	pushDummy: function() {
 		this.db.ref().set(null);
 
