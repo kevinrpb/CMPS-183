@@ -1,0 +1,88 @@
+Texbook Heroes
+Texbook Exchange
+Katerina, Kevin, Ron, Bryan
+
+Actions to stop doing
+
+•	Not have two people work on the same task if it can be done by one person
+
+
+•	Stop having too many conflict issues
+
+
+Actions to start doing
+
+
+•	Estimating how long some tasks take since it takes up time to complete another task
+
+
+•	If a task cannot be implemented fast then find another way to complete the task
+
+
+
+Actions to keep doing
+
+
+•	Keep communicating effectively with team members
+
+
+•	Scrum meetings
+
+
+Work Completed
+
+
+•	UI design for landing page
+
+
+•	Listing page
+
+
+•	Firebase integration
+
+
+•	Insertion of some data
+
+
+Work Not Completed
+
+
+•	Add the ability to edit profile/listing
+
+
+Work Completion Rate
+
+30+ hours
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
