@@ -20,7 +20,7 @@ class Layout extends React.Component {
 				<script type="text/javascript" src="/bundle.js"></script>
 			</body>
 			</html>
-			);
+		);
 	}
 }
 
