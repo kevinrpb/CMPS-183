@@ -112,7 +112,16 @@ module.exports = {
 		let database = this.db;
 
 		return new Promise(function(resolve, reject) {
-			resolve(id);
+			database.ref('/' + type + '/' + id).once('value')
+				.then(function(snapshot) {
+					let data = snapshot.val();
+					data.key = snapshot.key;
+					
+					resolve(data);
+				})
+				.catch(function(err) {
+					reject(err);
+				});
 		});
 	}
 };
