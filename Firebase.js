@@ -21,6 +21,7 @@ module.exports = {
 	db: fb.database(),
 
 	pushDummy: function() {
+		this.db.ref().set(null);
 
 		for (let key in dummy) {
 			for (let key2 in dummy[key]) {
@@ -92,10 +93,9 @@ module.exports = {
 						data.key = key;
 
 						// We filter the query and the object info to check if we should return it
-
-
-						// Push the item
-						items.push(data)
+						if (!query || query == "" || isMatch(data, query))
+							// Push the item
+							items.push(data)
 					});
 
 
@@ -125,3 +125,30 @@ module.exports = {
 		});
 	}
 };
+
+const isMatch = (item, query) => {
+
+	if (item && query) {
+		// Get different words in query
+		let words = query.split(' ');
+		// Iterate through the fields in the item
+		for (let key in item) {
+			// For each word
+			for (let word of words) {
+				let w = word.toLowerCase();
+				let field = ("" + item[key]).toLowerCase();
+
+				// Search word in field or field in word
+				let n1 = field.search(w);
+				let n2 = w.search(field)
+				if (n1 > -1 || n2 > -1) {
+					console.log("Match for", key, field, "with word", word);
+					console.log(n1, n2);
+					return true;
+				}
+			}
+		}
+	}
+
+	return false;
+}

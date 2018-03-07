@@ -24,6 +24,10 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 app.engine('jsx', createEngine());
 
+app.get('/dummy', function(req, res) {
+	require('./Firebase').pushDummy();
+	res.redirect('/listing');
+});
 /* routes */
 app.get('/', require('./routes/index'));   				// landing page
 app.get('/profile', require('./routes/profile'));   //  profile page
