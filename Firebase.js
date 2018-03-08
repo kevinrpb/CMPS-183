@@ -33,6 +33,8 @@ module.exports = {
 	    fb.auth().signInWithRedirect(provider).then(function(result) {
 	        console.log("Signed in using Google.");
 	    }).catch(function(error) {
+	    	console.log(error.code);
+	    	console.log(error.message);
 	        console.log("Error occured with sign in.");
 	    });
 	},
