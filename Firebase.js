@@ -30,7 +30,7 @@ module.exports = {
 	signIn: () => {
 	    var provider = new firebase.auth.GoogleAuthProvider();
 
-	    fb.auth().signInWithPopup(provider).then(function(result) {
+	    fb.auth().signInWithRedirect(provider).then(function(result) {
 	        console.log("Signed in using Google.");
 	    }).catch(function(error) {
 	        console.log("Error occured with sign in.");
