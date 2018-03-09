@@ -31,17 +31,32 @@ module.exports = {
 	    var provider = new firebase.auth.GoogleAuthProvider();
 
 	    fb.auth().signInWithRedirect(provider).then(function(result) {
-	        console.log("Signed in using Google.");
+	        console.log("Signed in");
 	    }).catch(function(error) {
 	        console.log("Error occured with sign in.");
 	    });
 	},
 	signOut: () => {
-		fb.auth().signOut()
+		fb.auth().signOut();
+	},
+	getUserInfo: function(email) {
+		let database = this.db;
+		let sanitizedEmail = email.split('.').join(',');
+		return new Promise((resolve, reject) => {
+			database.ref('/users/'+sanitizedEmail).once('value')
+				.then((snap) => {
+					resolve(snap.val());
+				}).catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+	addNewUser: function(data, email) {
+		let sanitizedEmail = email.split('.').join(',');
+		this.db.ref('/users/'+sanitizedEmail).set(data);
 	},
 	pushDummy: function() {
 		this.db.ref().set(null);
-
 		for (let key in dummy) {
 			for (let key2 in dummy[key]) {
 				this.db.ref('/' + key + '/').child(key2).set(dummy[key][key2]);

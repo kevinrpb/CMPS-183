@@ -23,6 +23,19 @@ class UserLink extends React.Component {
                 signedIn: true,
                 displayName: user.displayName
             });
+            let email = user.email
+            fb.getUserInfo(user.email).then((data) => {
+                if (!data) {
+                    let userObj = {
+                        email: user.email,
+                        name: user.displayName,
+                        offers: false,
+                        requests: false,
+                        uid: user.uid
+                    }
+                    fb.addNewUser(userObj, email);
+                }
+            })
         } else { // User is signed out.
             this.setState({
                 signedIn: false,
