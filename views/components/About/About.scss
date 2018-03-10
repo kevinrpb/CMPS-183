@@ -29,58 +29,70 @@
 
 }
 
-.content-container {
-  width: 100%;
-  height: 1000px;
+
+
+// Core styles
+%background {
+  background-image: url('https://images.unsplash.com/photo-1503685374561-caac80ea1399?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1192ba206152bc70c23bf29a9ba62157&auto=format&fit=crop&w=2533&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.hero-container {
+  @extend %background;
+  position: relative;
+  height: 100vh;
+}
+.glass {
+  color: #ffffff;
   position: relative;
   overflow: hidden;
-  
-  /* Enable GPU Rendering */
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+  font-size: 24px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+  }
+  &::before {
+    @extend %background;
+    -webkit-filter: url('#blur');
+    filter: url('#blur');
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+  }
+  span {
+    position: relative;
+    display: block;
+    background-color: rgba(0,0,0,0.2);
+    padding: 1rem;
+  }
 }
 
-.blur {
-  /* All the background image supports */
-  transform: translate(0px, 0px, 0px);
-  background-image: -webkit-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
-  background-image: -moz-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
-  background-image: -o-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
-  background-image: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  
-  /* blur filters */
-  -webkit-filter: blur(20px);
-  -o-filter: blur(20px);
-  filter: blur(20px);
-  
-  /* positioning and removing edges */
-  top: -70px;
-  right: -70px;
-  left: -70px;
-  padding: 70px;
+// Extra styles
+body {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
-
-.blur:after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1001;
-
-  /* Setting the gradient. Adds depth, and glass like effect. */
-  background-image: -webkit-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
-  background-image: -moz-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
-  background-image: -o-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
-  background-image: linear-gradient(-19deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
-
-  /* Blur to add depth. High to create smooth transition */
-  -webkit-filter: blur(70px);
-  -o-filter: blur(70px);
-  filter: blur(70px);
+.hero {
+  padding: 2rem;
+}
+.hero-title {
+  display: block;
+  width: 16rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.hero-content {
+  display: inline-block;
 }
 

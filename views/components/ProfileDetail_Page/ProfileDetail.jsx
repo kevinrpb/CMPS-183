@@ -1,8 +1,10 @@
 import React from 'react';
+import Gravatar from 'react-gravatar';
 
 import Navbar from '../Navbar/Nav.jsx';
 
 import './ProfileDetail.css';
+import '../../global.css';
 
 class ProfileDetail extends React.Component {
 	constructor(props) {
@@ -43,16 +45,24 @@ class ProfileDetail extends React.Component {
 					<div className="jumbotron">
 						<div className="row">
 							<div className="img col-12 col-md-3 col-lg-5">
-								<img src={this.state.item.img || "https://firebasestorage.googleapis.com/v0/b/textbookheroes-2df75.appspot.com/o/822711_user_512x512.png?alt=media&token=ed3e79fc-ea23-4afd-a93b-9cb32c734965"} alt="" className="img-fluid img-thumbnail rounded" />
+							<Gravatar email={this.state.item.email} size={300}/>
+								
 							</div>
 							<div className="info col-12 col-md-9 col-lg-7">
 								<h1 className="text-center">{this.state.item.name || "No listing title"}</h1>
+								
 								<h6 className="text-center"><a href={"mailto:" + this.state.item.email}>{this.state.item.email}</a></h6>
 								<p className="text-justify listing-description">{this.state.item.description || "No profile description"}</p>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="about"> 
+   					<a href="/about">About</a>
+   					</div>
+					<div className="copyright">
+			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
+		     	</div>
 			</div>
 		);
 	}

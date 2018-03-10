@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar/Nav.jsx';
 
 import './Landing.css';
+import '../../global.css';
 
 const LandingCarousel = (props) => {
 
