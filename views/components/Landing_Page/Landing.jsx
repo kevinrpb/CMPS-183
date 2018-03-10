@@ -112,21 +112,7 @@ class Landing extends React.Component {
 						</div>
 					</LandingCarousel>
 
-					<div id="landing-section-1" className="landing-section">
-						<div className="container">
-							<div className="row">
-								<LandingCard size={1} offset={0} title={"Card 1"} content={"This card takes full space"} />
-								<LandingCard size={2} offset={0} title={"Card 2"} content={"This card takes half space and no offset"} />
-								<LandingCard size={2} offset={0} title={"Card 3"} content={"This card takes half space and no offset"} />
-								<LandingCard size={2} offset={1} title={"Card 4"} content={"This card takes half space and 1 col offset"} />
-								<LandingCard size={3} offset={0} title={"Card 5"} content={"This card takes a third space and no offset"} />
-								<LandingCard size={3} offset={0} title={"Card 6"} content={"This card takes a third space and no offset"} />
-								<LandingCard size={3} offset={0} title={"Card 7"} content={"This card takes a third space and no offset"} />
-								<LandingCard size={3} offset={1} title={"Card 8"} content={"This card takes a third space and 1 col offset"} />
-								<LandingCard size={3} offset={2} title={"Card 9"} content={"This card takes a third space and 2 col offset"} />
-							</div>
-						</div>
-					</div>
+				
 					<div id="landing-section-2" className="landing-section">
 						<div className="container">
 							<div className="row">

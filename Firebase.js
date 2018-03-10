@@ -178,6 +178,25 @@ module.exports = {
 		});
 	},
 
+	//get Profile
+	getProfile: function(type, id) {
+		let database = this.db;
+
+		return new Promise(function(resolve, reject) {
+			database.ref('/' + type + '/' + id).once('value')
+				.then(function(snapshot) {
+					let data = snapshot.val();
+					data.key = snapshot.key;
+					
+					resolve(data);
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+    
+    //get Listing 
 	getListing: function(type, id) {
 		let database = this.db;
 

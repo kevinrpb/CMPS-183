@@ -35,9 +35,9 @@ app.get('/dummy', function(req, res) {
 });
 /* routes */
 app.get('/', require('./routes/index'));   				// landing page
-app.get('/profile', require('./routes/profile'));   //  profile page
 app.get('/listing', require('./routes/listing-result'));  //listing page
-app.get('/listing/:type/:id', require('./routes/listing-detail'));  //listing page
+app.get('/listing/:type/:id', require('./routes/listing-detail'));  //listing page details
+app.get('/profile/:type/:id', require('./routes/profile-detail'));  // profile page details
 
 app.listen(
     port,

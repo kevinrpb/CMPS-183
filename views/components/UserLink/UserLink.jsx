@@ -21,7 +21,8 @@ class UserLink extends React.Component {
         if (user) { // User is signed in.
             this.setState({
                 signedIn: true,
-                displayName: user.displayName
+                displayName: user.displayName,
+                email: user.email
             });
             let email = user.email
             fb.getUserInfo(user.email).then((data) => {
@@ -46,6 +47,8 @@ class UserLink extends React.Component {
 
     render() {
         if (this.state.signedIn) {
+            var tt = this.state.email;
+            tt=tt.replace(".", ",");
             return (
                 <div>
                     <li className="nav-item dropdown active">
@@ -53,7 +56,7 @@ class UserLink extends React.Component {
                         {this.state.displayName}
                         </a>
                         <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-user-name">
-                            <a className="dropdown-item" href="/profile"><span className="fa fa-user-circle"></span> Profile</a>
+                            <a className="dropdown-item" href={"/profile/users" + "/" + tt}><span className="fa fa-user-circle"></span> Profile</a>
                             <a className="dropdown-item" href="/listing"><span className="fa fa-list"></span> My Listings</a>
                             <div className="dropdown-divider"></div>
                             <a onClick={() => {fb.signOut()}} className="dropdown-item"><span className="fa fa-sign-out-alt"></span> Log Out</a>
