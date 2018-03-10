@@ -4,6 +4,7 @@ import Gravatar from 'react-gravatar';
 import Navbar from '../Navbar/Nav.jsx';
 
 import './ProfileDetail.css';
+//import './popup.js';
 import '../../global.css';
 
 class ProfileDetail extends React.Component {
@@ -16,6 +17,7 @@ class ProfileDetail extends React.Component {
 	}
 
 	componentDidMount() {
+
 	}
 
 	render() {
@@ -46,10 +48,13 @@ class ProfileDetail extends React.Component {
 						<div className="row">
 							<div className="img col-12 col-md-3 col-lg-5">
 							<Gravatar email={this.state.item.email} size={300}/>
+							<div class="gravatar"><p>Sign up with <a href="https://en.gravatar.com" target="_blank">gravatar </a>
+							to render your avatar.</p></div> 
+
 								
 							</div>
 							<div className="info col-12 col-md-9 col-lg-7">
-								<h1 className="text-center">{this.state.item.name || "No listing title"}</h1>
+								<h1 className="text-center">{this.state.item.name || "Default name"}</h1>
 								
 								<h6 className="text-center"><a href={"mailto:" + this.state.item.email}>{this.state.item.email}</a></h6>
 								<p className="text-justify listing-description">{this.state.item.description || "No profile description"}</p>

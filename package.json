@@ -35,6 +35,7 @@
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
     "firebase": "^4.9.0",
+    "jquery": "^3.3.1",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.1",
     "react": "^16.2.0",
