@@ -38,3 +38,112 @@ nav {
 .border-height{
   height:150px;
 }
+
+.illusion{
+  margin-left:150px;
+}
+
+#box1 {
+    width:50px;
+    height:50px;
+    border:2px solid white;
+    margin:0px;
+    padding : 0px ;
+    margin-left:150x;
+    left:40%;
+    top:30%;
+    animation: clockwise1 2s infinite ;
+}
+@keyframes clockwise1 {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(-720deg);
+    }
+}
+/* BOX 2 */
+
+#box2 {
+    width: 30px ;
+    height: 30px ;
+    border:1.9px solid black;
+    margin: 0px ;
+    padding: 0px ;
+    left:40.7%;
+    top:31.5%;
+    animation: counter_clockwise 1.8s infinite ;
+}
+keyframes counter_clockwise {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(-360deg);
+    }
+}
+/* BOX3 */
+
+#box3 {
+    width:40px;
+    height: 40px;
+    border:1.8px solid white;
+    //position: absolute;
+    margin:0px;
+    margin:0px;
+    top:33%;
+    left:41.5%;
+    animation : clockwise 1.7s infinite;
+}
+@keyframes clockwise {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/* BOX5 */
+#box5 {
+    width:110px;
+    height:110px;
+    border: 1.6px solid black;
+    //position: absolute;
+    margin:0px;
+    padding: 0px;
+    top:36%;
+    left:43%;
+    animation: clockwise 2s infinite;
+}
+@keyframes clockwise {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+/* BOX6 */
+#box6 {
+    width:100px;
+    height:100px;
+    border:1.4px  solid black;
+    //position: absolute;
+    margin:0px;
+    padding: 0px;
+    left: 43.8%;
+    top:37.5%;
+    animation: counter_clockwise 1.5s infinite;
+}
+@keyframes counter_clockwise {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(-360deg);
+    }
+}

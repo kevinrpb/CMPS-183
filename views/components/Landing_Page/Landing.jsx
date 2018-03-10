@@ -9,7 +9,7 @@ const LandingCarousel = (props) => {
 		<div id="landing-carousel" className="carousel slide" data-ride="carousel">
 			<div className="carousel-inner">
 				<div className="carousel-item active">
-					<img src="/img/books0.jpg" alt="" className="d-block"/>
+					<img src="/img/books6.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
 					<img src="/img/books.jpg" alt="" className="d-block"/>
@@ -21,7 +21,7 @@ const LandingCarousel = (props) => {
 					<img src="/img/books2.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="/img/books3.jpg" alt="" className="d-block"/>
+					<img src="/img/books0.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
 					<img src="/img/books4.jpg" alt="" className="d-block"/>
@@ -120,7 +120,10 @@ class Landing extends React.Component {
 							</div>
 						</div>
 					</div>
-
+   					
+   					<div class="about"> 
+   					<a href="/about">About</a>
+   					</div>
 					<div className="copyright">
 			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
 		     	</div>

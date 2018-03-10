@@ -5,6 +5,7 @@ import LandingPage from './components/Landing_Page/Landing.jsx';
 import ListingResultPage from './components/ListingResult_Page/ListingResult.jsx';
 import ListingDetailPage from './components/ListingDetail_Page/ListingDetail.jsx';
 import ProfileDetailPage from './components/ProfileDetail_Page/ProfileDetail.jsx';
+import About from './components/About/About.jsx';
 
 
 const PageContent = (props) => {
@@ -21,6 +22,10 @@ const PageContent = (props) => {
 
 		case 'profile-detail':
 			return(<ProfileDetailPage data={props.data} />)
+			break;
+
+		case 'about':
+			return(<About data={props.data} />)
 			break;
 			
 		// case 'search':
