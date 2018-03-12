@@ -12,7 +12,9 @@ class ProfileDetail extends React.Component {
 		super(props);
 		this.state = {
 			item: props.data.item,
-			type: props.data.type
+			type: props.data.type,
+			query: props.data.query,
+			offer: props.data.offer
 		}
 	}
 
@@ -58,6 +60,7 @@ class ProfileDetail extends React.Component {
 								
 								<h6 className="text-center"><a href={"mailto:" + this.state.item.email}>{this.state.item.email}</a></h6>
 								<p className="text-justify listing-description">{this.state.item.description || "No profile description"}</p>
+								<a href={"/listing"} className="btn btn-primary">View Listing</a>
 							</div>
 						</div>
 					</div>

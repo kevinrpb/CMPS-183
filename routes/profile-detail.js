@@ -17,6 +17,7 @@ module.exports = function(req, res) {
 		  	data: {
 		  		item: data,
 		  		type: type
+
 		  	}
 		  });
 		})
