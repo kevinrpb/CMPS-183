@@ -30,18 +30,35 @@ module.exports = {
 	signIn: () => {
 	    var provider = new firebase.auth.GoogleAuthProvider();
 
-	    fb.auth().signInWithPopup(provider).then(function(result) {
-	        console.log("Signed in using Google.");
+	    fb.auth().signInWithRedirect(provider).then(function(result) {
+	        console.log("Signed in");
 	    }).catch(function(error) {
+	    	console.log(error.code);
+	    	console.log(error.message);
 	        console.log("Error occured with sign in.");
 	    });
 	},
 	signOut: () => {
-		fb.auth().signOut()
+		fb.auth().signOut();
+	},
+	getUserInfo: function(email) {
+		let database = this.db;
+		let sanitizedEmail = email.split('.').join(',');
+		return new Promise((resolve, reject) => {
+			database.ref('/users/'+sanitizedEmail).once('value')
+				.then((snap) => {
+					resolve(snap.val());
+				}).catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+	addNewUser: function(data, email) {
+		let sanitizedEmail = email.split('.').join(',');
+		this.db.ref('/users/'+sanitizedEmail).set(data);
 	},
 	pushDummy: function() {
 		this.db.ref().set(null);
-
 		for (let key in dummy) {
 			for (let key2 in dummy[key]) {
 				this.db.ref('/' + key + '/').child(key2).set(dummy[key][key2]);
@@ -126,7 +143,60 @@ module.exports = {
 				});
 		});
 	},
+	
+	queryProfile: function(type, query) {
+		let database = this.db;
 
+		return new Promise(function(resolve, reject) {
+			// Access the ref for type of listing (offers/requests)
+			database.ref('/' + type + '/').once('value')
+				.then(function(snapshot) {
+					// We reveive a snapshot (object) and want to transform into Array
+					let items1 = [];
+
+					// Iterate over snapshot items (children)
+					snapshot.forEach(function(childSnapshot) {
+						// Get the DB key for the item and the object.
+						let key = childSnapshot.key;
+						let data = childSnapshot.val();
+						// Add the key to the object to keep track of it
+						data.key = key;
+
+						// We filter the query and the object info to check if we should return it
+						if (!query || query == "" || isMatch(data, query))
+							// Push the item
+							items1.push(data)
+					});
+
+
+					// Return the array
+					resolve(items1);
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+
+	//get Profile
+	getProfile: function(type, id) {
+		let database = this.db;
+
+		return new Promise(function(resolve, reject) {
+			database.ref('/' + type + '/' + id).once('value')
+				.then(function(snapshot) {
+					let data = snapshot.val();
+					data.key = snapshot.key;
+					
+					resolve(data);
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+    
+    //get Listing 
 	getListing: function(type, id) {
 		let database = this.db;
 

@@ -35,10 +35,12 @@
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
     "firebase": "^4.9.0",
+    "jquery": "^3.3.1",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-gravatar": "^2.6.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

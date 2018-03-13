@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '../Navbar/Nav.jsx';
 
 import './ListingDetail.css';
+import '../../global.css';
 
 class ListingDetail extends React.Component {
 	constructor(props) {
@@ -54,6 +55,12 @@ class ListingDetail extends React.Component {
 						</div>
 					</div>
 				</div>
+				<div class="about"> 
+   					<a href="/about">About</a>
+   					</div>
+					<div className="copyright">
+			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
+		     	</div>
 			</div>
 		);
 	}

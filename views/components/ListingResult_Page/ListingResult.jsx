@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '../Navbar/Nav.jsx';
 
 import './ListingResult.css';
+import '../../global.css';
 
 const ListItem = (props) => {
 	return (
@@ -64,6 +65,12 @@ class ListingResult extends React.Component {
 				<div id="listing-result" className="container-fluid row">
 					{list}
 				</div>
+				<div class="about"> 
+   					<a href="/about">About</a>
+   					</div>
+					<div className="copyright">
+			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
+		     	</div>
 			</div>
 		);
 	}

@@ -1,7 +1,7 @@
 let db = require('../Firebase');
 
 /*
- * GET profile page.
+ * GET listing page.
  */
 
 module.exports = function(req, res) {

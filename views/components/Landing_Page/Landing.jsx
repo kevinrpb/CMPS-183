@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar/Nav.jsx';
 
 import './Landing.css';
+import '../../global.css';
 
 const LandingCarousel = (props) => {
 
@@ -9,7 +10,7 @@ const LandingCarousel = (props) => {
 		<div id="landing-carousel" className="carousel slide" data-ride="carousel">
 			<div className="carousel-inner">
 				<div className="carousel-item active">
-					<img src="/img/books0.jpg" alt="" className="d-block"/>
+					<img src="/img/books6.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
 					<img src="/img/books.jpg" alt="" className="d-block"/>
@@ -21,7 +22,7 @@ const LandingCarousel = (props) => {
 					<img src="/img/books2.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
-					<img src="/img/books3.jpg" alt="" className="d-block"/>
+					<img src="/img/books0.jpg" alt="" className="d-block"/>
 				</div>
 				<div className="carousel-item">
 					<img src="/img/books4.jpg" alt="" className="d-block"/>
@@ -112,21 +113,7 @@ class Landing extends React.Component {
 						</div>
 					</LandingCarousel>
 
-					<div id="landing-section-1" className="landing-section">
-						<div className="container">
-							<div className="row">
-								<LandingCard size={1} offset={0} title={"Card 1"} content={"This card takes full space"} />
-								<LandingCard size={2} offset={0} title={"Card 2"} content={"This card takes half space and no offset"} />
-								<LandingCard size={2} offset={0} title={"Card 3"} content={"This card takes half space and no offset"} />
-								<LandingCard size={2} offset={1} title={"Card 4"} content={"This card takes half space and 1 col offset"} />
-								<LandingCard size={3} offset={0} title={"Card 5"} content={"This card takes a third space and no offset"} />
-								<LandingCard size={3} offset={0} title={"Card 6"} content={"This card takes a third space and no offset"} />
-								<LandingCard size={3} offset={0} title={"Card 7"} content={"This card takes a third space and no offset"} />
-								<LandingCard size={3} offset={1} title={"Card 8"} content={"This card takes a third space and 1 col offset"} />
-								<LandingCard size={3} offset={2} title={"Card 9"} content={"This card takes a third space and 2 col offset"} />
-							</div>
-						</div>
-					</div>
+				
 					<div id="landing-section-2" className="landing-section">
 						<div className="container">
 							<div className="row">
@@ -134,7 +121,10 @@ class Landing extends React.Component {
 							</div>
 						</div>
 					</div>
-
+   					
+   					<div class="about"> 
+   					<a href="/about">About</a>
+   					</div>
 					<div className="copyright">
 			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
 		     	</div>
