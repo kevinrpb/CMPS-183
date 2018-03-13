@@ -59,6 +59,8 @@ class UserLink extends React.Component {
                             <a className="dropdown-item" href={"/profile/users" + "/" + tt}><span className="fa fa-user-circle"></span> Profile</a>
                             <a className="dropdown-item" href="/listing"><span className="fa fa-list"></span> My Listings</a>
                             <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="/new"><span className="fa fa-plus"></span> New Listing</a>
+                            <div className="dropdown-divider"></div>
                             <a onClick={() => {fb.signOut()}} href="/" className="dropdown-item"><span className="fa fa-sign-out-alt"></span> Log Out</a>
                         </div>
                     </li>
