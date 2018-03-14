@@ -24,7 +24,9 @@ class UserLink extends React.Component {
                 displayName: user.displayName,
                 email: user.email
             });
+
             let email = user.email
+
             fb.getUserInfo(user.email).then((data) => {
                 if (!data) {
                     let userObj = {
@@ -52,7 +54,7 @@ class UserLink extends React.Component {
             return (
                 <div>
                     <li className="nav-item dropdown active">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbar-user-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="nav-link dropdown-toggle" href="#" id="navbar-user-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-email={tt}>
                         {this.state.displayName}
                         </a>
                         <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-user-name">

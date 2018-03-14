@@ -24,6 +24,9 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 app.engine('jsx', createEngine());
 
+app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodies
+
 app.get('/dummy', function(req, res) {
 	require('./Firebase').pushDummy();
 	res.redirect('/listing');
