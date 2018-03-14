@@ -55,7 +55,7 @@ class ListingDetail extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div class="about"> 
+				<div className="about"> 
    					<a href="/about">About</a>
    					</div>
 					<div className="copyright">
