@@ -45,7 +45,7 @@ class ProfileDetail extends React.Component {
 						</div>
 					</form>
 				</div>
-				<div id="listing-detail" className="container">
+				<div id="profile-detail" className="container">
 					<div className="jumbotron">
 						<div className="row">
 							<div className="img col-12 col-md-3 col-lg-5">
