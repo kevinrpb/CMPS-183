@@ -79,7 +79,7 @@ For example, for the listings:
 
 
 ## Scrum Board
-[Sprint 1](https://trello.com/b/IdbzlvJT/textbook-heroes-sprint-1)
+[Scrum](https://trello.com/textbookheroes)
 
 
 ## Team Members
