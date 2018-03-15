@@ -61,12 +61,12 @@ class ViewUser extends React.Component {
 								<p className="text-justify listing-description">{this.state.item.bio || "No profile description"}</p>
 								<p className="text-justify listing-description">{this.state.item.age || "No age specified"}</p>
 								<p className="text-justify listing-description">{this.state.item.major || "No major"}</p>
-								<a href={"/listing"} className="btn btn-primary">View {this.state.item.name} 's Listing</a>
+								<a href={"/listing?type=offers&query=" + this.state.item.email} className="btn btn-primary">View {this.state.item.name} 's Listing</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="about"> 
+				<div className="about"> 
    					<a href="/about">About</a>
    					</div>
 					<div className="copyright">
