@@ -32,10 +32,6 @@ app.get('/dummy', function(req, res) {
 	res.redirect('/listing');
 });
 
-app.get('/dummy', function(req, res) {
-	require('./Firebase').pushDummy();
-	res.redirect('/profile');
-});
 /* routes */
 app.get('/', require('./routes/index'));   				// landing page
 app.get('/listing', require('./routes/listing-result'));  //listing page

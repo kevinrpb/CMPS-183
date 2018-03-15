@@ -241,17 +241,19 @@ const isMatch = (item, query) => {
 		// Iterate through the fields in the item
 		for (let key in item) {
 			// For each word
-			for (let word of words) {
-				let w = word.toLowerCase();
-				let field = ("" + item[key]).toLowerCase();
+			if (item[key] != "") {
+				for (let word of words) {
+					let w = word.toLowerCase();
+					let field = ("" + item[key]).toLowerCase();
 
-				// Search word in field or field in word
-				let n1 = field.search(w);
-				let n2 = w.search(field)
-				if (n1 > -1 || n2 > -1) {
-					// console.log("Match for", key, field, "with word", word);
-					// console.log(n1, n2);
-					return true;
+					// Search word in field or field in word
+					let n1 = field.search(w);
+					let n2 = w.search(field)
+					// if (n1 > -1 || n2 > -1) {
+					// 	console.log("Match for", key, field, "with word", word);
+					// 	console.log(n1, n2);
+					// 	return true;
+					// }
 				}
 			}
 		}
