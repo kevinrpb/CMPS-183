@@ -10,7 +10,7 @@ module.exports = function(req, res) {
 
 	db.getListing(type, id)
 		.then(function(data) {
-			// console.log(data);
+			console.log(data);
 			res.render('Index', {
 		  	title: 'TBH - Listing',
 		  	page: 'listing-detail',
@@ -19,12 +19,6 @@ module.exports = function(req, res) {
 		  		type: type
 		  	}
 		  });
-			let type1 = req.body.type,
-			list = {
-					name: req.body.name,
-				},
-			user = req.body.email == '' ? null : req.body.email;
-			list.email = user ? user.replace(',', '.') : "";
 		})
 		.catch(function(err) {
 			console.error(err);
