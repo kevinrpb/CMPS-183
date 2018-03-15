@@ -65,7 +65,7 @@ class ListingResult extends React.Component {
 				<div id="listing-result" className="container-fluid row">
 					{list}
 				</div>
-				<div class="about"> 
+				<div className="about"> 
    					<a href="/about">About</a>
    					</div>
 					<div className="copyright">

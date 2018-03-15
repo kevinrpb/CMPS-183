@@ -10,7 +10,7 @@ module.exports = function(req, res) {
 
 	db.getListing(type, id)
 		.then(function(data) {
-			console.log(data);
+			// console.log(data);
 			res.render('Index', {
 		  	title: 'TBH - Listing',
 		  	page: 'listing-detail',
