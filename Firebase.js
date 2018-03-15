@@ -136,6 +136,32 @@ module.exports = {
 		});
 	},
 
+	addProfile: function(type, data, user) {
+		let database = this.db;
+
+		return new Promise(function(resolve, reject) {
+			database.ref('/' + type + '/').push(data)
+				.then(function(newKey) {
+					let k = newKey.toString().split('/');
+					k = k[k.length - 1];
+
+					let path = '/users/' + user + '/' + type + '/' + k;
+					console.log(path);
+
+					database.ref(path).set(true)
+						.then(function() {
+							resolve(k);
+						})
+						.catch(function(err) {
+							reject(err);
+						});
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+
 	queryListings: function(type, query) {
 		let database = this.db;
 
@@ -163,40 +189,6 @@ module.exports = {
 
 					// Return the array
 					resolve(items);
-				})
-				.catch(function(err) {
-					reject(err);
-				});
-		});
-	},
-	
-	queryProfile: function(type, query) {
-		let database = this.db;
-
-		return new Promise(function(resolve, reject) {
-			// Access the ref for type of listing (offers/requests)
-			database.ref('/' + type + '/').once('value')
-				.then(function(snapshot) {
-					// We reveive a snapshot (object) and want to transform into Array
-					let items1 = [];
-
-					// Iterate over snapshot items (children)
-					snapshot.forEach(function(childSnapshot) {
-						// Get the DB key for the item and the object.
-						let key = childSnapshot.key;
-						let data = childSnapshot.val();
-						// Add the key to the object to keep track of it
-						data.key = key;
-
-						// We filter the query and the object info to check if we should return it
-						if (!query || query == "" || isMatch(data, query))
-							// Push the item
-							items1.push(data)
-					});
-
-
-					// Return the array
-					resolve(items1);
 				})
 				.catch(function(err) {
 					reject(err);
