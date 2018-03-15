@@ -59,6 +59,9 @@ class UserLink extends React.Component {
                         </a>
                         <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-user-name">
                             <a className="dropdown-item" href={"/profile/users" + "/" + tt}><span className="fa fa-user-circle"></span> Profile</a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="/newprofile"><span className="fa fa-plus"></span> Update Profile </a>
+                            <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="/listing"><span className="fa fa-list"></span> My Listings</a>
                             <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="/new"><span className="fa fa-plus"></span> New Listing</a>

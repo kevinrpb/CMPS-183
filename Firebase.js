@@ -136,6 +136,32 @@ module.exports = {
 		});
 	},
 
+	addProfile: function(type, data, user) {
+		let database = this.db;
+
+		return new Promise(function(resolve, reject) {
+			database.ref('/' + type + '/').push(data)
+				.then(function(newKey) {
+					let k = newKey.toString().split('/');
+					k = k[k.length - 1];
+
+					let path = '/users/' + user + '/' + type + '/' + k;
+					console.log(path);
+
+					database.ref(path).set(true)
+						.then(function() {
+							resolve(k);
+						})
+						.catch(function(err) {
+							reject(err);
+						});
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+
 	queryListings: function(type, query) {
 		let database = this.db;
 

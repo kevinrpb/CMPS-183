@@ -8,13 +8,30 @@ import '../../global.css';
 class ListingDetail extends React.Component {
 	constructor(props) {
 		super(props);
+		this.updateMail = this.updateMail.bind(this);
 		this.state = {
 			item: props.data.item,
-			type: props.data.type
+			type: props.data.type,
 		}
 	}
 
 	componentDidMount() {
+		firebase.auth().onAuthStateChanged((user) => {this.updateMail(user)});
+	}
+
+	updateMail(user) {
+		this.setState({
+				userMail: user.email.replace('.', ',')
+			});
+		// if (user) {
+		// 	this.setState({
+		// 		userMail: user.email.replace('.', ',')
+		// 	});
+		// } else {
+		// 	this.setState({
+		// 		userMail: 'null'
+		// 	});
+		// }
 	}
 
 	render() {
@@ -49,7 +66,7 @@ class ListingDetail extends React.Component {
 							<div className="info col-12 col-md-9 col-lg-7">
 								<h1 className="text-center">{this.state.item.title || "No listing title"}</h1>
 								<h6 className="text-center">{(this.state.item.author || "No author") + " - ISBN: " + (this.state.item.ISBN || "No listing ISBN")}</h6>
-								<h6 className="text-center">{((new Date(this.state.item.date)).toLocaleDateString('en-US') || "No listing date") + " - $" + (this.state.item.price || "No listing price") + " - "}<a href={"mailto:" + this.state.item.email}>{this.state.item.email}</a></h6>
+								<h6 className="text-center">{((new Date(this.state.item.date)).toLocaleDateString('en-US') || "No listing date") + " - $" + (this.state.item.price || "No listing price") + " - "}<a href={"/viewuser/users" + "/" + this.state.item.email.replace(".", ",")} className="btn btn-primary">View Profile & Contact</a></h6>
 								<p className="text-justify listing-description">{this.state.item.description || "No listing description"}</p>
 							</div>
 						</div>
