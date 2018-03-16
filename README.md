@@ -73,9 +73,15 @@ For example, for the listings:
 
 
 ## Documents
-[Sprint 1](https://docs.google.com/document/d/12I-Q21wPMOoyTfUW27Hp_W_xazsKs4Od_s6yv6pAQgY/edit?usp=sharing)
-
 [Release Plan 1](https://docs.google.com/document/d/1UQ19d5sdkth_8BzuwrX1pVepqWDvTsUHg0RQOk4Y-LI/edit?usp=sharing)
+
+[Sprint 1](https://github.com/Platem/CMPS-183/blob/master/docs/Sprint_1)
+
+[Sprint 2](https://github.com/Platem/CMPS-183/blob/master/docs/Sprint_2)
+
+[Sprint 3](https://github.com/Platem/CMPS-183/blob/master/docs/Sprint_3)
+
+[Sprint 4](https://github.com/Platem/CMPS-183/blob/master/docs/Sprint_4)
 
 
 ## Scrum Board
