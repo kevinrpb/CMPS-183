@@ -136,28 +136,33 @@ module.exports = {
 		});
 	},
 
-	updateProfile: function(type, data, user) {
+	updateProfile: function(user, data) {
 		let database = this.db;
+		console.log(user);
 
 		return new Promise(function(resolve, reject) {
-			database.ref('/' + type + '/' + user).update(data)
+			database.ref('/users/' + user).update(data)
+				.then(function() {
+					resolve();
+				})
 				.catch(function(err) {
 					reject(err);
 				});
 		});
 	},
 	updateBookList: (id, data) => {
-  let ref = firebaseDb.ref('users');
-  return ref
-    .child(id)
-    .update(data)
-    .then(() => ref.once('value'))
-    .then(snapshot => snapshot.val())
-    .catch(error => ({
-      errorCode: error.code,
-      errorMessage: error.message
-    }));
-},
+	  let ref = this.db.ref('users');
+
+	  return ref
+	    .child(id)
+	    .update(data)
+	    .then(() => ref.once('value'))
+	    .then(snapshot => snapshot.val())
+	    .catch(error => ({
+	      errorCode: error.code,
+	      errorMessage: error.message
+	    }));
+	},
 
 	queryListings: function(type, query) {
 		let database = this.db;

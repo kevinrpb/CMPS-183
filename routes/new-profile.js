@@ -8,17 +8,19 @@ module.exports = {
 	  });
 	},
 	post: function(req, res) {
-		let type = req.body.type,
-				list = {
-					age: req.body.age,
-					major: req.body.major,
-					bio: req.body.bio
-				},
-				user = req.body.email == '' ? null : req.body.email;
+		console.log(req.body);
+		let new_data = {
+			age: req.body.age,
+			major: req.body.major,
+			bio: req.body.bio
+		},
+		user = req.body.email == '' ? null : req.body.email;
+		user = user.replace(/\./g, ',');
 
-		list.email = user ? user.replace(',', '.') : "";
-
-		db.updateProfile(type, list, user)
+		db.updateProfile(user, new_data)
+			.then(function() {
+				res.redirect('/profile/users/' + user);
+			})
 			.catch(function(err) {
 				console.error(err);
 				res.send(err);
