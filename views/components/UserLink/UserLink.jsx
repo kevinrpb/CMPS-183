@@ -22,7 +22,7 @@ class UserLink extends React.Component {
             this.setState({
                 signedIn: true,
                 displayName: user.displayName,
-                email: user.email
+                email: user.email,
             });
 
             let email = user.email
@@ -32,6 +32,9 @@ class UserLink extends React.Component {
                     let userObj = {
                         email: user.email,
                         name: user.displayName,
+                        age: "",
+                        major: "",
+                        bio: "",
                         offers: false,
                         requests: false,
                         uid: user.uid
@@ -49,8 +52,9 @@ class UserLink extends React.Component {
 
     render() {
         if (this.state.signedIn) {
+            //replace all dots with commas for accessing firebase users
             var tt = this.state.email;
-            tt=tt.replace(".", ",");
+            tt=tt.replace(/\./g,',');
             return (
                 <div>
                     <li className="nav-item dropdown active">
@@ -59,7 +63,10 @@ class UserLink extends React.Component {
                         </a>
                         <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-user-name">
                             <a className="dropdown-item" href={"/profile/users" + "/" + tt}><span className="fa fa-user-circle"></span> Profile</a>
-                            <a className="dropdown-item" href="/listing"><span className="fa fa-list"></span> My Listings</a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="/newprofile"><span className="fa fa-plus"></span> Update Profile </a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href={"/listing?type=offers&query=" + this.state.email}><span className="fa fa-list"></span> My Listings</a>
                             <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="/new"><span className="fa fa-plus"></span> New Listing</a>
                             <div className="dropdown-divider"></div>

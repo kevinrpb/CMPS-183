@@ -45,7 +45,11 @@ class NewForm extends React.Component {
 						<label htmlFor="new-title">*Title</label>
 						<input name="title" type="text" id="new-title" className="form-control" required defaultValue="" />
 					</div>
-					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
+					<div className="form-group col-12 col-md-4 col-lg-3">
+						<label htmlFor="new-price">*Price</label>
+						<input name="price" type="number" id="new-price" className="form-control" required defaultValue="0.0" />
+					</div>
+					<div className="form-group col-12 col-md-8 col-lg-9">
 						<label htmlFor="new-author">*Author</label>
 						<input name="author" type="text" id="new-author" className="form-control" required defaultValue="" />
 					</div>

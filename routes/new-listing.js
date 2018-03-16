@@ -15,15 +15,18 @@ module.exports = {
 		let type = req.body.type,
 				list = {
 					title: req.body.title,
-					author: req.body.author
+					author: req.body.author,
+					price: req.body.price
 				},
 				user = req.body.email == '' ? null : req.body.email;
 
-		list.isbn = req.body.isbn ? req.body.isbn : "";
+		list.isbn = req.body.isbn ? req.body.isbn.replace(/-/g, '').replace(/ /g, '') : "";
 		list.edition = req.body.edition ? req.body.edition : "";
 		list.course = req.body.course ? req.body.course : "";
 		list.tags = req.body.tags ? req.body.tags.split(',') : [];
 		list.email = user ? user.replace(',', '.') : "";
+
+		console.log(list)
 
 		db.addListing(type, list, user)
 			.then(function(key) {

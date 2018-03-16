@@ -136,6 +136,34 @@ module.exports = {
 		});
 	},
 
+	updateProfile: function(user, data) {
+		let database = this.db;
+		console.log(user);
+
+		return new Promise(function(resolve, reject) {
+			database.ref('/users/' + user).update(data)
+				.then(function() {
+					resolve();
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+	},
+	updateBookList: (id, data) => {
+	  let ref = this.db.ref('users');
+
+	  return ref
+	    .child(id)
+	    .update(data)
+	    .then(() => ref.once('value'))
+	    .then(snapshot => snapshot.val())
+	    .catch(error => ({
+	      errorCode: error.code,
+	      errorMessage: error.message
+	    }));
+	},
+
 	queryListings: function(type, query) {
 		let database = this.db;
 
@@ -163,40 +191,6 @@ module.exports = {
 
 					// Return the array
 					resolve(items);
-				})
-				.catch(function(err) {
-					reject(err);
-				});
-		});
-	},
-	
-	queryProfile: function(type, query) {
-		let database = this.db;
-
-		return new Promise(function(resolve, reject) {
-			// Access the ref for type of listing (offers/requests)
-			database.ref('/' + type + '/').once('value')
-				.then(function(snapshot) {
-					// We reveive a snapshot (object) and want to transform into Array
-					let items1 = [];
-
-					// Iterate over snapshot items (children)
-					snapshot.forEach(function(childSnapshot) {
-						// Get the DB key for the item and the object.
-						let key = childSnapshot.key;
-						let data = childSnapshot.val();
-						// Add the key to the object to keep track of it
-						data.key = key;
-
-						// We filter the query and the object info to check if we should return it
-						if (!query || query == "" || isMatch(data, query))
-							// Push the item
-							items1.push(data)
-					});
-
-
-					// Return the array
-					resolve(items1);
 				})
 				.catch(function(err) {
 					reject(err);
@@ -249,17 +243,19 @@ const isMatch = (item, query) => {
 		// Iterate through the fields in the item
 		for (let key in item) {
 			// For each word
-			for (let word of words) {
-				let w = word.toLowerCase();
-				let field = ("" + item[key]).toLowerCase();
+			if (item[key] != "") {
+				for (let word of words) {
+					let w = word.toLowerCase();
+					let field = ("" + item[key]).toLowerCase();
 
-				// Search word in field or field in word
-				let n1 = field.search(w);
-				let n2 = w.search(field)
-				if (n1 > -1 || n2 > -1) {
-					console.log("Match for", key, field, "with word", word);
-					console.log(n1, n2);
-					return true;
+					// Search word in field or field in word
+					let n1 = field.search(w);
+					let n2 = w.search(field)
+					// if (n1 > -1 || n2 > -1) {
+					// 	console.log("Match for", key, field, "with word", word);
+					// 	console.log(n1, n2);
+					// 	return true;
+					// }
 				}
 			}
 		}

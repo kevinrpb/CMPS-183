@@ -3,22 +3,23 @@ import Gravatar from 'react-gravatar';
 
 import Navbar from '../Navbar/Nav.jsx';
 
-import './ProfileDetail.css';
+import './ViewUser.css';
 //import './popup.js';
 import '../../global.css';
 
-class ProfileDetail extends React.Component {
+class ViewUser extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			item: props.data.item,
 			type: props.data.type,
 			query: props.data.query,
-			offer: props.data.offer,
+			offer: props.data.offer
 		}
 	}
 
 	componentDidMount() {
+
 
 	}
 
@@ -50,8 +51,6 @@ class ProfileDetail extends React.Component {
 						<div className="row">
 							<div className="img col-12 col-md-3 col-lg-5">
 							<Gravatar email={this.state.item.email} size={300}/>
-							<div className="gravatar"><p>Sign up with <a href="https://en.gravatar.com" target="_blank">gravatar </a>
-							to render your avatar.</p></div> 
 
 								
 							</div>
@@ -62,7 +61,7 @@ class ProfileDetail extends React.Component {
 								<p className="text-justify listing-description">{this.state.item.bio || "No profile description"}</p>
 								<p className="text-justify listing-description">{this.state.item.age || "No age specified"}</p>
 								<p className="text-justify listing-description">{this.state.item.major || "No major"}</p>
-								<a href={"/listing?type=offers&query=" + this.state.item.email} className="btn btn-primary">View Listings</a>
+								<a href={"/listing?type=offers&query=" + this.state.item.email} className="btn btn-primary">View {this.state.item.name} 's Listing</a>
 							</div>
 						</div>
 					</div>
@@ -78,4 +77,4 @@ class ProfileDetail extends React.Component {
 	}
 }
 
-export default ProfileDetail;
+export default ViewUser;
