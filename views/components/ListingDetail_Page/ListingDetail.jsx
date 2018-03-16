@@ -66,14 +66,17 @@ class ListingDetail extends React.Component {
 							<div className="info col-12 col-md-9 col-lg-7">
 								<h1 className="text-center">{this.state.item.title || "No listing title"}</h1>
 								<h6 className="text-center">{(this.state.item.author || "No author") + " - ISBN: " + (this.state.item.isbn || "No listing ISBN")}</h6>
-								<h6 className="text-center">{((new Date(this.state.item.date)).toLocaleDateString('en-US') || "No listing date") + " - $" + (this.state.item.price || "No listing price") + " - "}<a href={"/viewuser/users" + "/" + this.state.item.email.replace(".", ",")} className="btn btn-primary">View Profile & Contact</a></h6>
-								<p className="text-justify listing-description">{this.state.item.description || "No listing description"}</p>
+								<h6 className="text-center">{"$" + (this.state.item.price || "No listing price") + " - "}<a href={"/viewuser/users" + "/" + this.state.item.email.replace(".", ",")} className="btn btn-primary">View Profile & Contact</a></h6>
+								<p className="text-justify listing-description">{this.state.item.bookDescription || "No listing description"}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div className="about"> 
    					<a href="/about">About</a>
+   					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   					<a href="/contact">Contact</a>
    					</div>
 					<div className="copyright">
 			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>

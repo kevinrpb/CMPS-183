@@ -13,7 +13,7 @@ const ListItem = (props) => {
 				<div className="card-body">
 					<h5 className="card-title">{props.item.title || "Default title"}</h5>
 					<h6 className="card-subtitle">{(props.item.author || 'No author')}<br />{("$" + parseFloat(props.item.price).toFixed(2)) || 'No price'}</h6>
-					<p className="card-text">{props.item.ISBN || 'No ISBN'}</p>
+					<p className="card-text">{props.item.isbn || 'No ISBN'}</p>
 					<a href={"/listing/" + props.type + "/" + props.item.key} className="btn btn-primary">View Listing</a>
 				</div>
 			</div>
@@ -67,6 +67,9 @@ class ListingResult extends React.Component {
 				</div>
 				<div className="about"> 
    					<a href="/about">About</a>
+   					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   					<a href="/contact">Contact</a>
    					</div>
 					<div className="copyright">
 			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>

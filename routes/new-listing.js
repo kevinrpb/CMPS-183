@@ -22,6 +22,8 @@ module.exports = {
 
 		list.isbn = req.body.isbn ? req.body.isbn.replace(/-/g, '').replace(/ /g, '') : "";
 		list.edition = req.body.edition ? req.body.edition : "";
+		list.img = req.body.img ? req.body.img : "";
+		list.bookDescription = req.body.bookDescription ? req.body.bookDescription : "";
 		list.course = req.body.course ? req.body.course : "";
 		list.tags = req.body.tags ? req.body.tags.split(',') : [];
 		list.email = user ? user.replace(',', '.') : "";

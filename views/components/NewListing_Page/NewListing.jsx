@@ -58,6 +58,14 @@ class NewForm extends React.Component {
 						<input name="isbn" type="text" id="new-isbn" className="form-control" defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
+						<label htmlFor="new-img">Upload Book Cover URL</label>
+						<input name="img" type="text" id="new-img" className="form-control" defaultValue="" />
+					</div>
+					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
+						<label htmlFor="new-bookDescription">Book Desciption (quality)</label>
+						<input name="bookDescription" type="text" id="new-bookDescription" className="form-control" defaultValue="" />
+					</div>
+					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
 						<label htmlFor="new-edition">Edition</label>
 						<input name="edition" type="text" id="new-edition" className="form-control" defaultValue="" />
 					</div>

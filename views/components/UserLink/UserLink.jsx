@@ -35,6 +35,8 @@ class UserLink extends React.Component {
                         age: "",
                         major: "",
                         bio: "",
+                        img: "",
+                        bookDescription: "",
                         offers: false,
                         requests: false,
                         uid: user.uid
