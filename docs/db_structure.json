@@ -1,0 +1,37 @@
+{
+	"users": [
+		"<$email>": {
+			"uid": 		"<auto>",
+			"Name":	 "<required>",
+			"major": 	"<optional>",
+			"address": 	"<optional>",
+			"phone": 	"<optional>",
+			"listings": 	["<$idrefs>"]
+		}
+	],
+
+	"requests": [
+		"<$auto_id>": {
+			"isbn": 		"<optional>",
+			"title":		"<required>",
+			"author": 	"<required>",
+			"date":		"<auto>",
+			"edition": 	"<optional>",
+			"course": 	["<optional>"],
+			"tags":	 	["<optional>"]
+		}
+	],
+
+	"offers": [
+		"<$auto_id>": {
+			"isbn": 		"<optional>",
+			"title": 		"<required>",
+			"author": 	"<required>",
+			"date":		"<auto>",
+			"edition": 	"<optional>",
+			"course": 	"[<optional>]",
+			"tags":		["<optional>"]
+		}
+	]
+}
+
