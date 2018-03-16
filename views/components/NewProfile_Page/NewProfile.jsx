@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Nav.jsx';
 import * as firebase from 'firebase';
 import './NewProfile.css';
 
-class NewProfile extends React.Component {
+class NewForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.updateMail = this.updateMail.bind(this);
@@ -15,7 +15,7 @@ class NewProfile extends React.Component {
 	}
 
 	componentDidMount() {
-        firebase.auth().onAuthStateChanged((user) => {this.updateMail(user)});
+    firebase.auth().onAuthStateChanged((user) => {this.updateMail(user)});
 	}
 
 	updateMail(user) {
@@ -29,26 +29,20 @@ class NewProfile extends React.Component {
 			});
 		}
 	}
+
 	render() {
 		return (
-			<div>
-				<Navbar navClass={'bg-danger custom'} />
-				<br></br>
-				<center><h2>Update Your Profile</h2></center>
-			
-				<div className="container">
-				
-						<form action="/newprofile" method="post" className="needs-validation">
+			<form action="/newprofile" method="post" className="needs-validation">
 				<div className="form-row">
-					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
+					<div className="form-group col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
 						<label htmlFor="new-age">Age</label>
 						<input name="age" type="text" id="new-age" className="form-control" required defaultValue="" />
 					</div>
-					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
+					<div className="form-group col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
 						<label htmlFor="new-major">Major</label>
 						<input name="major" type="text" id="new-major" className="form-control" required defaultValue="" />
 					</div>
-					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
+					<div className="form-group col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
 						<label htmlFor="new-bio">Bio</label>
 						<input name="bio" type="text" id="new-bio" className="form-control" defaultValue="" />
 					</div>
@@ -60,9 +54,34 @@ class NewProfile extends React.Component {
 					</div>
 				</div>
 			</form>
+		);
+	}
+}
+
+class NewProfile extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div>
+				<Navbar navClass={'bg-danger custom'} />
+				<div className="container">
+					<h2 className="text-center mt-4">Update Your Profile</h2>
+					<div className="jumbotron" id="new-container">
+					</div>
 				</div>
 			</div>
 		);
 	}
 }
+
+
+if (typeof window !== 'undefined') {
+	const container = document.getElementById('new-container');
+	if (container)
+		ReactDOM.render(<NewForm />, container);
+}
+
 export default NewProfile;

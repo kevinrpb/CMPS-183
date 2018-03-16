@@ -50,7 +50,7 @@ class ProfileDetail extends React.Component {
 						<div className="row">
 							<div className="img col-12 col-md-3 col-lg-5">
 							<Gravatar email={this.state.item.email} size={300}/>
-							<div class="gravatar"><p>Sign up with <a href="https://en.gravatar.com" target="_blank">gravatar </a>
+							<div className="gravatar"><p>Sign up with <a href="https://en.gravatar.com" target="_blank">gravatar </a>
 							to render your avatar.</p></div> 
 
 								
@@ -67,7 +67,7 @@ class ProfileDetail extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div class="about"> 
+				<div className="about"> 
    					<a href="/about">About</a>
    					</div>
 					<div className="copyright">
