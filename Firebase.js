@@ -140,27 +140,24 @@ module.exports = {
 		let database = this.db;
 
 		return new Promise(function(resolve, reject) {
-			database.ref('/' + type + '/').update(data)
-				.then(function(newKey) {
-					let k = newKey.toString().split('/');
-					k = k[k.length - 1];
-
-					let path = '/users/' + user + '/' + type + '/' + k;
-					console.log(path);
-
-					database.ref(path).set(true)
-						.then(function() {
-							resolve(k);
-						})
-						.catch(function(err) {
-							reject(err);
-						});
-				})
+			database.ref('/' + type + '/' + user).update(data)
 				.catch(function(err) {
 					reject(err);
 				});
 		});
 	},
+	updateBookList: (id, data) => {
+  let ref = firebaseDb.ref('users');
+  return ref
+    .child(id)
+    .update(data)
+    .then(() => ref.once('value'))
+    .then(snapshot => snapshot.val())
+    .catch(error => ({
+      errorCode: error.code,
+      errorMessage: error.message
+    }));
+},
 
 	queryListings: function(type, query) {
 		let database = this.db;

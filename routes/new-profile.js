@@ -1,9 +1,5 @@
 let db = require('../Firebase');
 
-/*
- * GET home page.
- */
-
 module.exports = {
 	get: function(req, res) {
 		res.render('Index', {
@@ -12,25 +8,22 @@ module.exports = {
 	  });
 	},
 	post: function(req, res) {
-		let type = "users",
+		let type = req.body.type,
 				list = {
 					age: req.body.age,
-					major: req.body.major
+					major: req.body.major,
+					bio: req.body.bio
 				},
 				user = req.body.email == '' ? null : req.body.email;
 
-		list.bio = req.body.bio ? req.body.bio : "";
 		list.email = user ? user.replace(',', '.') : "";
 
 		db.updateProfile(type, list, user)
-			.then(function(key) {
-				res.redirect('/profile/' + type + '/' + user);
-			})
 			.catch(function(err) {
 				console.error(err);
 				res.send(err);
 			});
 	}
-}
+ }
 
 

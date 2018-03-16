@@ -22,7 +22,7 @@ class UserLink extends React.Component {
             this.setState({
                 signedIn: true,
                 displayName: user.displayName,
-                email: user.email
+                email: user.email,
             });
 
             let email = user.email
@@ -32,6 +32,9 @@ class UserLink extends React.Component {
                     let userObj = {
                         email: user.email,
                         name: user.displayName,
+                        age: "",
+                        major: "",
+                        bio: "",
                         offers: false,
                         requests: false,
                         uid: user.uid
