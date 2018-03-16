@@ -89,10 +89,10 @@ For example, for the listings:
 
 
 ## Team Members
->Ron Marks - PO
+>Ron Marks - PO - Developer
 
->Kevin Romero Peces-Barba - Developer
+>Kevin Romero Peces-Barba - Developer - Scrum Master (Sprint 3)
 
->Katerina Chinnappan - Scrum Master (Sprint 1)
+>Katerina Chinnappan - Developer - Scrum Master (Sprint 1, Sprint 2)
 
->Bryan Uribe - Developer
+>Bryan Uribe - Developer - Scrum Master (Sprint 4)
