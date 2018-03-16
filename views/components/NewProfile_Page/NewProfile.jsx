@@ -69,7 +69,7 @@ class NewProfile extends React.Component {
 				<Navbar navClass={'bg-danger custom'} />
 				<div className="container">
 					<h2 className="text-center mt-4">Update Your Profile</h2>
-					<div className="jumbotron" id="new-container">
+					<div className="jumbotron" id="new-containerr">
 					</div>
 				</div>
 			</div>
@@ -79,7 +79,7 @@ class NewProfile extends React.Component {
 
 
 if (typeof window !== 'undefined') {
-	const container = document.getElementById('new-container');
+	const container = document.getElementById('new-containerr');
 	if (container)
 		ReactDOM.render(<NewForm />, container);
 }

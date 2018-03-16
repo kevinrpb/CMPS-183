@@ -251,11 +251,11 @@ const isMatch = (item, query) => {
 					// Search word in field or field in word
 					let n1 = field.search(w);
 					let n2 = w.search(field)
-					// if (n1 > -1 || n2 > -1) {
-					// 	console.log("Match for", key, field, "with word", word);
-					// 	console.log(n1, n2);
-					// 	return true;
-					// }
+					if (n1 > -1 || n2 > -1) {
+						console.log("Match for", key, field, "with word", word);
+						console.log(n1, n2);
+						return true;
+					}
 				}
 			}
 		}
