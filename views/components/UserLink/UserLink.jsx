@@ -49,8 +49,9 @@ class UserLink extends React.Component {
 
     render() {
         if (this.state.signedIn) {
+            //replace all dots with commas for accessing firebase users
             var tt = this.state.email;
-            tt=tt.replace(".", ",");
+            tt=tt.replace(/\./g,',');
             return (
                 <div>
                     <li className="nav-item dropdown active">
@@ -62,7 +63,7 @@ class UserLink extends React.Component {
                             <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="/newprofile"><span className="fa fa-plus"></span> Update Profile </a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="/listing"><span className="fa fa-list"></span> My Listings</a>
+                            <a className="dropdown-item" href="/listing"><span className="fa fa-list"></span> All Listings</a>
                             <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="/new"><span className="fa fa-plus"></span> New Listing</a>
                             <div className="dropdown-divider"></div>

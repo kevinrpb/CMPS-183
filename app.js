@@ -47,6 +47,7 @@ app.get('/listing/:type/:id', require('./routes/listing-detail'));  //listing pa
 app.get('/profile/:type/:id', require('./routes/profile-detail'));  // profile page details
 app.get('/viewuser/:type/:id', require('./routes/view-user'));  // profile page details
 app.get('/about', require('./routes/about'));  // about page
+app.get('/contact', require('./routes/contact'));  // about page
 
 app.listen(
     port,

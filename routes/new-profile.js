@@ -22,7 +22,7 @@ module.exports = {
 		list.bio = req.body.bio ? req.body.bio : "";
 		list.email = user ? user.replace(',', '.') : "";
 
-		db.addProfile(type, list, user)
+		db.updateProfile(type, list, user)
 			.then(function(key) {
 				res.redirect('/profile/' + type + '/' + user);
 			})

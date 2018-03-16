@@ -136,11 +136,11 @@ module.exports = {
 		});
 	},
 
-	addProfile: function(type, data, user) {
+	updateProfile: function(type, data, user) {
 		let database = this.db;
 
 		return new Promise(function(resolve, reject) {
-			database.ref('/' + type + '/').push(data)
+			database.ref('/' + type + '/').update(data)
 				.then(function(newKey) {
 					let k = newKey.toString().split('/');
 					k = k[k.length - 1];

@@ -123,7 +123,9 @@ class Landing extends React.Component {
 					</div>
    					
    					<div className="about"> 
-   					<a href="/about">About</a>
+   					<a href="/about">About</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   					<a href="/contact">Contact</a>
    					</div>
 					<div className="copyright">
 			  		<center> <p>© 2018 Textbook Heroes. All rights reserved </p></center>
