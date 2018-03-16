@@ -22,7 +22,7 @@ class UserLink extends React.Component {
             this.setState({
                 signedIn: true,
                 displayName: user.displayName,
-                email: user.email
+                email: user.email,
             });
 
             let email = user.email
@@ -32,6 +32,9 @@ class UserLink extends React.Component {
                     let userObj = {
                         email: user.email,
                         name: user.displayName,
+                        age: "",
+                        major: "",
+                        bio: "",
                         offers: false,
                         requests: false,
                         uid: user.uid
@@ -49,8 +52,9 @@ class UserLink extends React.Component {
 
     render() {
         if (this.state.signedIn) {
+            //replace all dots with commas for accessing firebase users
             var tt = this.state.email;
-            tt=tt.replace(/\./g, ",");
+            tt=tt.replace(/\./g,',');
             return (
                 <div>
                     <li className="nav-item dropdown active">

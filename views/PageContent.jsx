@@ -9,6 +9,7 @@ import NewProfile from './components/NewProfile_Page/NewProfile.jsx';
 import ProfileDetailPage from './components/ProfileDetail_Page/ProfileDetail.jsx';
 import ViewUser from './components/ViewUser_Page/ViewUser.jsx';
 import About from './components/About/About.jsx';
+import Contact from './components/Contact_Page/Contact.jsx';
 
 
 const PageContent = (props) => {
@@ -39,6 +40,10 @@ const PageContent = (props) => {
 
 		case 'about':
 			return(<About data={props.data} />)
+			break;
+
+		case 'contact':
+			return(<Contact data={props.data} />)
 			break;
 			
 		// case 'search':
