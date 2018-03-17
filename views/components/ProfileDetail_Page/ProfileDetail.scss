@@ -6,7 +6,8 @@
 #profile-detail {
 	.jumbotron {
 		margin-top: 2em;
-
+		border-radius: 5px;
+		background:url(https://images.unsplash.com/photo-1444791252404-500e5b11f71b?ixlib=rb-0.3.5&s=27efeeb7d1367857438a4caba11870d7&auto=format&fit=crop&w=1500&q=80);
 		.listing-description {
 			margin-top: 3em;
 		}
@@ -16,3 +17,11 @@
 .gravatar a{
 	color:#ba1255;
 }
+
+.about-field{
+	color:#c91426;
+	font-size: 25px;
+	font-style: bold;
+	text-decoration: underline;
+}
+

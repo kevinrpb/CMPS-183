@@ -150,6 +150,19 @@ module.exports = {
 				});
 		});
 	},
+	removeListing: function(key, data){
+		let database = this.db;
+		return new Promise(function(resolve, reject){
+			database.ref('/offers/').child(key).remove()
+			.then(function() {
+					resolve();
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+		});
+
+	},
 	updateBookList: (id, data) => {
 	  let ref = this.db.ref('users');
 

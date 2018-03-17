@@ -14,7 +14,7 @@ class ProfileDetail extends React.Component {
 			item: props.data.item,
 			type: props.data.type,
 			query: props.data.query,
-			offer: props.data.offer,
+			offer: props.data.offer
 		}
 	}
 
@@ -59,9 +59,18 @@ class ProfileDetail extends React.Component {
 								<h1 className="text-center">{this.state.item.name || "Default name"}</h1>
 								
 								<h6 className="text-center"><a href={"mailto:" + this.state.item.email}>{this.state.item.email}</a></h6>
-								<p className="text-justify listing-description">{this.state.item.bio || "No profile description"}</p>
-								<p className="text-justify listing-description">{this.state.item.age || "No age specified"}</p>
-								<p className="text-justify listing-description">{this.state.item.major || "No major"}</p>
+								<p className="text-justify listing-description" >
+								<div class="about-field">Bio </div>
+								{this.state.item.bio || "No profile description"}
+								</p>
+								<p className="text-justify listing-description">
+								<div class="about-field">Age </div>  
+								{this.state.item.age || "No age specified"}
+								</p>
+								<p className="text-justify listing-description">
+								<div class="about-field">Major </div> 
+								{this.state.item.major || "No major"}
+								</p>
 								<a href={"/listing?type=offers&query=" + this.state.item.email} className="btn btn-primary">View Listings</a>
 							</div>
 						</div>

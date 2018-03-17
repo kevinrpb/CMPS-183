@@ -35,15 +35,16 @@ class NewForm extends React.Component {
 			<form action="/newprofile" method="post" className="needs-validation">
 				<div className="form-row">
 					<div className="form-group col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-						<label htmlFor="new-age">Age</label>
+						<label htmlFor="new-age">
+						<div class="profile-field">Age</div></label>
 						<input name="age" type="text" id="new-age" className="form-control" required defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-						<label htmlFor="new-major">Major</label>
+						<label htmlFor="new-major"><div class="profile-field">Major</div></label>
 						<input name="major" type="text" id="new-major" className="form-control" required defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-						<label htmlFor="new-bio">Bio</label>
+						<label htmlFor="new-bio"><div class="profile-field">Bio</div></label>
 						<input name="bio" type="text" id="new-bio" className="form-control" defaultValue="" />
 					</div>
 					 <div className="form-group" hidden>

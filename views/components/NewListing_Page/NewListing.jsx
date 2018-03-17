@@ -35,46 +35,46 @@ class NewForm extends React.Component {
 			<form action="/new" method="post" className="needs-validation">
 				<div className="form-row">
 					<div className="form-group col-12 col-md-4 col-lg-3">
-						<label htmlFor="new-type">Listing Type</label>
+						<label htmlFor="new-type"><div class="listing-field">Listing Type</div></label>
 						<select name="type" id="new-type" className="form-control" required defaultValue="offers">
 			      	<option value="offers">I want to sell...</option>
 							<option value="requests">I want to buy...</option>
 						</select>
 					</div>
 					<div className="form-group col-12 col-md-8 col-lg-9">
-						<label htmlFor="new-title">*Title</label>
+						<label htmlFor="new-title"><div class="listing-field">*Title</div></label>
 						<input name="title" type="text" id="new-title" className="form-control" required defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-4 col-lg-3">
-						<label htmlFor="new-price">*Price</label>
+						<label htmlFor="new-price"><div class="listing-field">*Price</div></label>
 						<input name="price" type="number" id="new-price" className="form-control" required defaultValue="0.0" />
 					</div>
 					<div className="form-group col-12 col-md-8 col-lg-9">
-						<label htmlFor="new-author">*Author</label>
+						<label htmlFor="new-author"><div class="listing-field">*Author</div></label>
 						<input name="author" type="text" id="new-author" className="form-control" required defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
-						<label htmlFor="new-isbn">ISBN</label>
+						<label htmlFor="new-isbn"><div class="listing-field">ISBN</div></label>
 						<input name="isbn" type="text" id="new-isbn" className="form-control" defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
-						<label htmlFor="new-img">Upload Book Cover URL</label>
+						<label htmlFor="new-img"><div class="listing-field">Upload Book Cover URL</div></label>
 						<input name="img" type="text" id="new-img" className="form-control" defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
-						<label htmlFor="new-bookDescription">Book Desciption (quality)</label>
+						<label htmlFor="new-bookDescription"><div class="listing-field">Book Description (quality, etc)</div></label>
 						<input name="bookDescription" type="text" id="new-bookDescription" className="form-control" defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
-						<label htmlFor="new-edition">Edition</label>
+						<label htmlFor="new-edition"><div class="listing-field">Edition</div></label>
 						<input name="edition" type="text" id="new-edition" className="form-control" defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
-						<label htmlFor="new-course">Course</label>
+						<label htmlFor="new-course"><div class="listing-field">Course</div></label>
 						<input name="course" type="text" id="new-course" className="form-control" defaultValue="" />
 					</div>
 					<div className="form-group col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3">
-						<label htmlFor="new-tags">Extra tags (comma separated)</label>
+						<label htmlFor="new-tags"><div class="listing-field">Extra Tags (separated by comma)</div></label>
 						<input name="tags" type="text" id="new-tags" className="form-control" defaultValue="" />
 					</div>
 					<div className="form-group" hidden>
